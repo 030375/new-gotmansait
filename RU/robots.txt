@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /login/
+Disallow: /cgi-bin/
+Disallow: /*?preview=
+
+Sitemap: https://gottmanterapija.lv/sitemap.xml

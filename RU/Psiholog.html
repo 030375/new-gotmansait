@@ -1,0 +1,1221 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клинический психолог Ксения Бодрихина в Риге | Консультации и терапия</title>
+    <meta name="description" content="Клинический психолог Ксения Бодрихина в Риге. Индивидуальные консультации, помощь при тревожности, депрессии, кризисах. Запись по телефону +371 26037277">
+    <meta name="keywords" content="психолог Рига, психолог Латвия, консультация психолога, терапия, Ксения Бодрихина, помощь психолога">
+    <meta name="author" content="Ксения Бодрихина">
+    <link rel="canonical" href="https://gottmanterapija.lv" />
+    <meta property="og:title" content="Клинический Психолог Ксения Бодрихина в Риге | Консультации и терапия">
+    <meta property="og:description" content="Клинический психолог Ксения Бодрихина в Риге. Индивидуальные консультации, помощь при тревожности, депрессии, кризисах">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gottmanterapija.lv">
+    <meta property="og:image" content="https://i.imgur.com/t63lwiF.jpeg">
+    <meta name="robots" content="index, follow">
+
+
+ <!-- Подключаем шрифты -->
+
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<script>
+    // Преподгрузка шрифтов
+    const preconnect = document.createElement('link');
+    preconnect.rel = 'preconnect';
+    preconnect.href = 'https://fonts.gstatic.com';
+    document.head.appendChild(preconnect);
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+   
+    
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (минимально) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Психолог Ксения Бодрихина",
+      "image": "https://i.imgur.com/t63lwiF.jpeg",
+      "description": "Клинический психолог в Риге. Индивидуальные консультации, помощь при тревожности, депрессии, кризисах.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Skolas iela 12",
+        "addressLocality": "Rīga",
+        "addressCountry": "LV"
+      },
+      "telephone": "+37126037277",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/ksenija_bodrihina/",
+        "https://www.facebook.com/ksenija.obuhova"
+      ]
+    }
+    </script>
+
+    <style>
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fff9fa;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffd6e0 0%, #fff9fa 100%);
+        }
+        .btn-primary {
+            background-color: #ff7b9c;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #ff5c86;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 123, 156, 0.3);
+        }
+        .section-divider {
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(255,214,224,1) 0%, rgba(255,249,250,1) 100%);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        .faq-active .faq-answer {
+            max-height: 500px;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-in {
+    animation-delay: 0.2s;
+}
+.fade-in:nth-child(2) { animation-delay: 0.3s; }
+.fade-in:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Улучшенный эффект для бургера */
+#menu-toggle i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#menu-toggle:hover i {
+    transform: scale(1.1);
+    color: #ec4376;
+}
+
+/* Анимация появления мобильного меню */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 400px;
+}
+.active-service-btn {
+        background-color: #ec4899; /* pink-500 */
+        color: white;
+        box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
+    }
+    .service-content-panel {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .service-content-panel.active-service-panel {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+</head>
+<body class="text-gray-700">
+
+<!-- Header -->
+<header class="hero-gradient sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-6 py-4 md:py-6">
+        <nav class="flex items-center justify-between">
+            <!-- Логотип -->
+            <a href="#home" class="text-2xl font-bold text-pink-600 hover:text-pink-700 transition">Ксения Бодрихина</a>
+
+            <!-- Десктопное меню -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Обо мне</a>
+                <a href="#services" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Услуги</a>
+                <a href="#approach" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Подход</a>
+                <a href="#testimonials" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Отзывы</a>
+                <a href="#contact" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Контакты</a>
+                <a href="index.html" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Вернуться на главную</a>
+            </div>
+
+            <!-- Бургер-иконка -->
+            <button id="menu-toggle" class="md:hidden text-pink-600 focus:outline-none" aria-label="Открыть меню">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-sm rounded-xl mt-4 mx-6 p-4 space-y-3 shadow-lg border border-pink-100 transition-all duration-300 ease-in-out">
+            <a href="#about" class="block text-pink-600 hover:text-pink-800 font-medium py-2 border-b border-pink-100 last:border-b-0">Обо мне</a>
+            <a href="#services" class="block text-pink-600 hover:text-pink-800 font-medium py-2 border-b border-pink-100 last:border-b-0">Услуги</a>
+            <a href="#approach" class="block text-pink-600 hover:text-pink-800 font-medium py-2 border-b border-pink-100 last:border-b-0">Подход</a>
+            <a href="#testimonials" class="block text-pink-600 hover:text-pink-800 font-medium py-2 border-b border-pink-100 last:border-b-0">Отзывы</a>
+            <a href="#contact" class="block text-pink-600 hover:text-pink-800 font-medium py-2 border-b border-pink-100 last:border-b-0">Контакты</a>
+            <a href="index.html" class="block text-pink-600 hover:text-pink-800 font-medium py-2 border-b border-pink-100 last:border-b-0">Вернуться на главную</a>
+        </div>
+    </div>
+</header>
+<!-- Hero Section with Subtle Background -->
+<section class="py-16 md:py-20 bg-white relative overflow-hidden">
+
+
+
+
+<div 
+    class="absolute inset-0 bg-cover bg-center z-0 opacity-80"
+    style="background-image: url('./img/DOpwya5.webp');"
+>
+
+</div>
+    <!-- Очень лёгкий оверлей (едва заметный) -->
+    <div class="absolute inset-0 bg-white/60 z-10"></div>
+    
+    <!-- Дополнительный эффект: очень лёгкое размытие фона -->
+    <style>
+        .bg-cover {
+            filter: blur(0.5px);
+        }
+        @media (max-width: 768px) {
+            .bg-cover {
+                filter: none; /* Отключаем размытие на мобильных, чтобы не тормозило */
+            }
+        }
+    </style>
+
+    <!-- Контент -->
+    <div class="container mx-auto px-6 relative z-20">
+        <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <!-- Фото — будет первым на мобильных -->
+            <div class="md:w-1/2 flex justify-center order-1 md:order-2">
+                <div class="relative group">
+                    <!-- Анимированный фоновый круг -->
+                    <div class="absolute -inset-6 bg-gradient-to-r from-pink-200 via-rose-100 to-pink-200 rounded-full blur-xl opacity-60 animate-pulse"></div>
+                    <div class="absolute -inset-2 bg-white rounded-full border-4 border-pink-100 transition duration-500 group-hover:scale-105"></div>
+                    
+                    <!-- Фото -->
+
+    <img 
+    src="./img/ksenija-hero 300.webp" 
+    srcset="./img/ksenija-hero 300.webp 300w, ./img/ksenija-hero 600.webp 600w"
+    sizes="(max-width: 768px) 200px, 300px"
+    alt="Ксения Бодрихина- клинический психолог в Риге"
+    class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl transition duration-500 transform group-hover:scale-105"
+                    >
+                </div>
+            </div>
+
+            <!-- Текст — будет вторым на мобильных -->
+            <div class="md:w-1/2 text-center md:text-left px-4 order-2 md:order-1">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
+                    Клинический психолог в Риге <br>
+                    <span class="bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent font-bold">Ксения Бодрихина</span>
+                </h1>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    Индивидуальные консультации для решения личных и профессиональных проблем.  
+                    Вместе мы найдём путь к <strong class="text-pink-600">гармонии</strong> и <strong class="text-pink-600">к себе</strong>.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20индивидуальную%20консультацию" target="_blank" rel="noopener" class="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-semibold py-3 px-8 rounded-full text-center transition-all transform hover:scale-105 shadow-md flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                    </a>
+                    <a href="#about" class="border-2 border-pink-600 text-pink-600 font-semibold py-3 px-8 rounded-full text-center hover:bg-pink-50 hover:shadow-md transition-all duration-300">
+                        Узнать больше
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+   <!-- About Section -->
+<section id="about" class="py-20 bg-gradient-to-b from-pink-50 to-white">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <!-- Изображение (скрывается на мобильных) -->
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <div class="relative group hidden md:block">
+                    <!-- Фоновый размытый круг -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-pink-200 to-rose-200 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-500"></div>
+                    
+
+
+<img 
+                        src="https://images.squarespace-cdn.com/content/v1/5f7719077f57240fd14627c7/1604084237448-CFQLL8SVMR1O8PTNGH5I/Holly%2Bc%2Bpeonie%2Blight%2Bbackground.jpg" 
+                        alt="Цветы на светлом фоне — атмосфера спокойствия и заботы" 
+                        class="w-72 h-72 rounded-2xl object-cover border-4 border-white shadow-xl transform group-hover:scale-105 transition duration-500"
+                    >
+                </div>
+            </div>
+
+            <!-- Текст и квалификация -->
+            <div class="md:w-1/2 mt-8 md:mt-0 space-y-6">
+                <h2 class="font-playfair text-4xl font-bold text-gray-800">Ксения Бодрихина</h2>
+                
+                <p class="text-lg text-gray-700">
+                    Психология — моё призвание, хобби и способ помогать другим. Я искренне верю, что каждый заслуживает быть услышанным, понятым и поддержанным.
+                </p>
+                
+                <p class="text-lg text-gray-700">
+                    Я постоянно повышаю квалификацию, чтобы быть не просто специалистом, а <strong>надёжной опорой</strong> в сложные моменты жизни.
+                </p>
+
+                <!-- Цитата в виде карточки -->
+                <div class="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-2xl p-6 shadow-md relative">
+                    <i class="fas fa-quote-left text-4xl text-pink-300 absolute left-5 top-5 opacity-50"></i>
+                    <p class="text-lg text-gray-800 pl-8 relative z-10 italic">
+                        <strong>«Я не даю ответы. Я помогаю находить их внутри себя.»</strong>
+                    </p>
+                    <p class="text-pink-600 font-semibold text-right mt-3">— Ксения Бодрихина</p>
+                </div>
+
+                <!-- Заголовок "Квалификация" -->
+                <h3 class="font-playfair text-2xl font-bold text-gray-800 flex items-center mt-6">
+                    <i class="fas fa-graduation-cap text-pink-500 mr-3"></i>
+                    Моя квалификация
+                </h3>
+
+                <!-- Список квалификации -->
+                <ul class="space-y-3 pl-5">
+                    <li class="text-gray-700 flex items-start">
+                        <i class="fas fa-check text-pink-500 mt-1 mr-2 text-sm"></i>
+                        <span>Сертифицированный клинический психолог (RSU, сертификат 1300777)</span>
+                    </li>
+                    <li class="text-gray-700 flex items-start">
+                        <i class="fas fa-check text-pink-500 mt-1 mr-2 text-sm"></i>
+                        <span>Сертифицированный специалист по работе с парами по методу Готтмана (Gottman Institute)</span>
+                    </li>
+                    <li class="text-gray-700 flex items-start">
+                        <i class="fas fa-check text-pink-500 mt-1 mr-2 text-sm"></i>
+                        <span>Сертифицированный системный расстановщик (ИКСР, Москва)</span>
+                    </li>
+                    <li class="text-gray-700 flex items-start">
+                        <i class="fas fa-check text-pink-500 mt-1 mr-2 text-sm"></i>
+                        <span>Лайф-коуч (ICU)</span>
+                    </li>
+                    <li class="text-gray-700 flex items-start">
+                        <i class="fas fa-check text-pink-500 mt-1 mr-2 text-sm"></i>
+                        <span>Мастер НЛП, тренер НЛП и коучинга (ICU)</span>
+                    </li>
+                    <li class="text-gray-700 flex items-start">
+                        <i class="fas fa-check text-pink-500 mt-1 mr-2 text-sm"></i>
+                        <span>Специализация в онкопсихологии</span>
+                    </li>
+                    <li class="text-gray-700 flex items-start">
+                        <i class="fas fa-check text-pink-500 mt-1 mr-2 text-sm"></i>
+                        <span>Психология нарушений пищевого поведения</span>
+                    </li>
+                    <li class="text-gray-700 flex items-start">
+                        <i class="fas fa-heart text-pink-500 mt-1 mr-2 text-sm"></i>
+                        <span>400+ часов личной и групповой терапии</span>
+                    </li>
+                </ul>
+
+               
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Therapy Question Section with Animations & Interactivity -->
+<section class="py-20 bg-gradient-to-b from-gray-100 to-pink-50 relative overflow-hidden" id="therapy-question">
+    <!-- tsparticles Background (Desktop only) -->
+    <div id="tsparticles" class="hidden md:block absolute inset-0 -z-10"></div>
+
+    <div class="container mx-auto px-6 max-w-4xl relative">
+        <!-- Декоративное сердце сверху -->
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 text-pink-200 opacity-30 hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </div>
+
+        <!-- Основной блок -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-12 border border-pink-100 fade-in" id="therapy-content">
+            <!-- Заголовок -->
+            <div class="bg-pink-50 border-l-8 border-pink-400 rounded-r-xl p-6 mb-8">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 leading-tight italic text-center">
+                    «А нужна ли мне вообще помощь?»
+                </h2>
+            </div>
+
+            <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>
+                    Мы все нуждаемся во взгляде со стороны и <em class="text-pink-600 font-medium">в живом</em> человеческом общении.
+                </p>
+
+                    Иногда переживания — как узел в сердце. Их можно держать в себе или начать их развязывать — вместе.
+                </p>
+
+                <p>
+                    Благодаря моему опыту и подготовке, мы сможем вместе по-новому осмыслить то, что вы чувствуете.  
+                    Это сложнее сделать с другом или членом семьи — потому что здесь нет ожиданий, оценок, обязанностей.
+                </p>
+
+                <!-- Карточка-совет -->
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-200 text-center fade-in" style="animation-delay: 0.3s">
+                    <p class="text-xl font-bold text-gray-800">
+                        🌱 <strong>Если вы читаете это — вы уже сделали первый шаг.</strong>
+                    </p>
+                    <p class="text-gray-600 text-sm mt-2">Признать, что нужна поддержка — это проявление силы, а не слабости.</p>
+                </div>
+
+                
+
+        <!-- Декоративные руки снизу -->
+        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-pink-200 opacity-40 hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-16" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6S10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H9V3H15V9H21ZM3 9H9V3H3V9ZM18 11H16V13H18V11ZM8 11H6V13H8V11ZM12 13C10.9 13 10 13.9 10 15V17H14V15C14 13.9 13.1 13 12 13Z"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+ <!-- Contact Section -->
+    <section id="priziv" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6"> <a href="https://wa.me/37126037277" class="text-pink-300 hover:text-pink-200> <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6 text-gray-800">Оставайтесь <a href="#" class="underline">на связи</a>.</h2>
+<p class="text-xl mb-10">Вам не нужно проходить это в одиночку — я здесь, чтобы поддержать вас.</p>
+
+                        <a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20индивидуальную%20консультацию" 
+                           target="_blank" rel="noopener"
+                           class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all inline-block">
+                            <i class="fab fa-whatsapp mr-2"></i> Написать мне
+                        </a>
+
+
+        </div>
+    </section>
+
+ <!-- Services Section (Интерактивная версия) -->
+<section id="services" class="py-20 bg-gradient-to-b from-white to-pink-50">
+    <div class="container mx-auto px-6">
+        <!-- Заголовок -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <span class="relative inline-block">
+                    Мои услуги
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full"></span>
+                </span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+                Я предлагаю профессиональную поддержку в удобном для вас формате. Выберите тот, что подходит именно вам.
+            </p>
+        </div>
+
+        <!-- Основной блок с услугами -->
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Интерактивная карточка для консультаций -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl shadow-pink-500/10 border border-gray-100 transition-all duration-300">
+                
+                <!-- Переключатель (Toggle) -->
+                <div class="flex justify-center mb-8">
+                    <div class="bg-gray-100 p-1.5 rounded-full flex items-center space-x-2">
+                        <button data-target="online" class="service-toggle-btn active-service-btn font-semibold py-2 px-6 rounded-full transition-all duration-300">
+                            Онлайн
+                        </button>
+                        <button data-target="in-person" class="service-toggle-btn font-semibold py-2 px-6 rounded-full transition-all duration-300">
+                            Очно
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Контент для Онлайн -->
+                <div id="online-content" class="service-content-panel active-service-panel">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <!-- Левая часть: Описание -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-pink-100 p-3 rounded-full"><i class="fas fa-laptop-medical text-pink-600 text-xl"></i></div>
+                                <h3 class="font-playfair text-2xl font-bold text-gray-800">Индивидуальная консультация (Онлайн)</h3>
+                            </div>
+                            <p class="text-gray-600">Глубокая работа с вашим запросом в комфортной для вас обстановке, где бы вы ни находились.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start"><i class="fas fa-star text-green-500 mt-1 mr-2"></i><span>Экономия времени и денег на дорогу.</span></li>
+                                <li class="flex items-start"><i class="fas fa-star text-green-500 mt-1 mr-2"></i><span>Максимальный комфорт и конфиденциальность.</span></li>
+                            </ul>
+                        </div>
+                        <!-- Правая часть: Цена и кнопка -->
+                        <div class="bg-pink-50 border border-pink-200 rounded-2xl p-6 text-center">
+                            <div class="mb-4">
+                                <span class="text-4xl font-bold text-pink-600">€50</span>
+                                
+                            </div>
+                            <p class="text-gray-500 mb-6">за 60-минутную сессию</p>
+                            <a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20индивидуальную%20консультацию%20ОНЛАЙН-консультацию" target="_blank" rel="noopener" class="block w-full text-center bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold py-3 px-6 rounded-full hover:from-pink-600 hover:to-rose-600 transition transform hover:scale-105 shadow-md">
+                                Записаться онлайн
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Контент для Очно -->
+                <div id="in-person-content" class="service-content-panel">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <!-- Левая часть: Описание -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-gray-100 p-3 rounded-full"><i class="fas fa-user-friends text-gray-600 text-xl"></i></div>
+                                <h3 class="font-playfair text-2xl font-bold text-gray-800">Индивидуальная консультация (Очно) </h3>
+                            </div>
+                                   <p class="text-red-600"> В данный момент доступна только on-line консультация. </p>
+                            <p class="text-gray-600">Классический формат терапии в уютном и безопасном кабинете в самом центре Риги.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start"><i class="fas fa-star text-green-500 mt-1 mr-2"></i><span>Атмосфера, способствующая открытости.</span></li>
+                                <li class="flex items-start"><i class="fas fa-star text-green-500 mt-1 mr-2"></i><span>Возможность полностью сменить обстановку.</span></li>
+                            </ul>
+                        </div>
+                        <!-- Правая часть: Цена и кнопка -->
+                        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 text-center">
+                             <div class="mb-4">
+                                <span class="text-4xl font-bold text-gray-700">€50</span>
+                            </div>
+                            <p class="text-gray-500 mb-6">за 60-минутную сессию</p>
+                            <a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20индивидуальную%20ОЧНУЮ%20консультацию" target="_blank" rel="noopener" class="block w-full text-center border-2 border-pink-500 text-pink-500 font-bold py-3 px-6 rounded-full hover:bg-pink-50 transition">
+                                Записаться на очную встречу
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+           <!-- Карточка 3: Диагностика + Заключение (Обновленная версия) -->
+<div class="mt-8 bg-white rounded-3xl p-8 shadow-2xl shadow-blue-500/10 border border-gray-100 transition-all duration-300 transform hover:-translate-y-1 group">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between">
+        <div class="flex items-start mb-4 sm:mb-0">
+            <div class="bg-blue-100 p-3 rounded-full mr-4 group-hover:bg-blue-200 transition">
+                <i class="fas fa-clipboard-check text-blue-600 text-xl"></i>
+            </div>
+            <div>
+                <h3 class="font-playfair text-2xl font-bold text-gray-800">Профессиональная диагностика + заключение</h3>
+                 <div class="mt-1">
+                    <span class="text-blue-600 font-bold text-lg">€200</span>
+                    <span class="text-gray-500 text-sm"> / полный комплекс</span>
+                </div>
+            </div>
+        </div>
+         <a href="https://wa.me/37126037277?text=Здравствуйте!%20Меня%20интересует%20профессиональная%20диагностика%20с%20заключением" target="_blank" rel="noopener" class="w-full mt-4 sm:mt-0 sm:w-auto text-center bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold py-3 px-6 rounded-full hover:from-blue-600 hover:to-indigo-600 transition transform hover:scale-105 shadow-md">
+            Узнать больше
+        </a>
+    </div>
+    <p class="text-gray-600 mt-4 leading-relaxed pl-0 sm:pl-16">
+        Глубокая психодиагностика когнитивных функций, эмоциональной сферы и личности. <strong>По итогам вы получаете официальное заключение</strong>, которое можно использовать для учёбы, работы или для глубокого личного понимания.
+    </p>
+</div>
+   <!-- Approach Section -->
+<section id="approach" class="py-20 bg-gradient-to-b from-pink-50 via-white to-white relative overflow-hidden">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <!-- Заголовок -->
+        <div class="text-center mb-12 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                <span class="relative inline-block">
+                    Мой подход
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full"></span>
+                </span>
+            </h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                Я верю, что каждый человек — как сад. Иногда нужны забота, свет и немного времени, чтобы раскрыться.
+            </p>
+        </div>
+
+        <!-- Основной принцип -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-pink-100 mb-12 text-center max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s">
+            <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-4">Главный принцип моей работы</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                <strong>Делать шаги, которые по силам клиенту.</strong> 
+                Бережность, мягкость и внимание к вашему запросу — вот что важно. 
+                Я не буду толкать вас вперёд, я буду рядом — помогу найти опоры в самых сложных жизненных ситуациях.
+            </p>
+            <div class="mt-6 text-pink-500 opacity-60">
+                <i class="fas fa-hands-helping text-3xl"></i>
+            </div>
+        </div>
+
+      
+
+        <!-- Заголовок "С чем я работаю" -->
+        <h3 class="font-playfair text-2xl font-bold text-center text-gray-800 mb-8 fade-in" style="animation-delay: 0.4s">С чем я работаю</h3>
+
+        <!-- Адаптивная сетка (2 на мобильных, 2 на десктопе) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+            <!-- Карточка 1 -->
+            <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-pink-300 breath-card group hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start">
+                    <div class="bg-pink-100 p-3 rounded-full mr-4 group-hover:bg-pink-200 transition">
+                        <i class="fas fa-heartbeat text-pink-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-playfair text-xl font-bold text-gray-800 mb-2">Кризисная помощь</h4>
+                        <p class="text-gray-600">Помощь в проживании кризиса, возвращение себе покоя и ощущения себя.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-300 breath-card group hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4 group-hover:bg-blue-200 transition">
+                        <i class="fas fa-baby text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-playfair text-xl font-bold text-gray-800 mb-2">Поддержка молодых мам</h4>
+                        <p class="text-gray-600">Возвращение к себе после декрета, поиск ресурсов и баланса в новой роли.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-300 breath-card group hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 group-hover:bg-purple-200 transition">
+                        <i class="fas fa-users text-purple-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-playfair text-xl font-bold text-gray-800 mb-2">Отношения</h4>
+                        <p class="text-gray-600">Трудности в паре, конфликты, непонимание — мы найдём путь к диалогу.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-orange-300 breath-card group hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start">
+                    <div class="bg-orange-100 p-3 rounded-full mr-4 group-hover:bg-orange-200 transition">
+                        <i class="fas fa-utensils text-orange-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-playfair text-xl font-bold text-gray-800 mb-2">Пищевое поведение</h4>
+                        <p class="text-gray-600">Лишний вес, переедание, одиночество за едой — разберёмся в причинах.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-teal-300 breath-card group hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start">
+                    <div class="bg-teal-100 p-3 rounded-full mr-4 group-hover:bg-teal-200 transition">
+                        <i class="fas fa-smile text-teal-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-playfair text-xl font-bold text-gray-800 mb-2">Самопринятие</h4>
+                        <p class="text-gray-600">Любовь к себе, принятие своей истории, работа с внутренним критиком.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 6 -->
+            <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-indigo-300 breath-card group hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4 group-hover:bg-indigo-200 transition">
+                        <i class="fas fa-briefcase text-indigo-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-playfair text-xl font-bold text-gray-800 mb-2">Профессиональный рост</h4>
+                        <p class="text-gray-600">Поиск себя в профессии, выгорание, понимание своих целей и ресурсов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Призыв к действию -->
+        <div class="text-center mt-8 fade-in" style="animation-delay: 0.5s">
+            <a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20индивидуальную%20консультацию" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold py-3 px-8 rounded-full hover:from-pink-600 hover:to-rose-600 transition transform hover:scale-105 shadow-md">
+                <i class="fab fa-whatsapp"></i>
+                Написать в WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <div class="section-divider"></div>
+    <section id="testimonials" class="py-16 bg-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Отзывы клиентов</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Отзывы (оставлены без изменений) -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Ксения помогла мне справиться с тревожностью, которая преследовала меня годами. После нескольких месяцев работы я чувствую себя совершенно другим человеком — уверенным и спокойным."</p>
+                    <div class="flex items-center">
+                      
+                        <div>
+                            <p class="font-bold text-gray-800">Мария, 34 года</p>
+                            <p class="text-gray-500 text-sm">Менеджер проекта</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "Благодаря семейной терапии мы с мужем смогли наладить отношения, которые казались безнадежными. Ксения помогла нам 
+                        научиться слышать друг друга и решать конфликты конструктивно."
+                    </p>
+                    <div class="flex items-center">
+                        
+                        <div>
+                            <p class="font-bold text-gray-800">Елена, 29 лет</p>
+                            <p class="text-gray-500 text-sm">Дизайнер</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "Я обратился к Ксении в состоянии глубокого профессионального выгорания. Она не только помогла мне восстановиться, 
+                        но и найти новый смысл в работе. Теперь я знаю, как поддерживать баланс."
+                    </p>
+                    <div class="flex items-center">
+                        
+                        <div>
+                            <p class="font-bold text-gray-800">Дмитрий, 41 год</p>
+                            <p class="text-gray-500 text-sm">IT-специалист</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Therapy Section -->
+    <section id="online" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5f7719077f57240fd14627c7/1604085924800-TZ7FIADJ4SBKAMHJMJLY/young+woman+getting+online+counseling" 
+                         alt="Онлайн-консультация" 
+                         class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6 text-gray-800">Терапия прямо из дома.</h2>
+                    <p class="text-lg">Все мои услуги доступны онлайн через бесплатную и безопасную платформу Zoom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- FAQ Section -->
+<section id="faq" class="py-20 bg-gradient-to-b from-white to-pink-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Часто задают мне</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Вот вопросы, которые слышу чаще всего. Но если у вас свой — <strong class="text-pink-600">напишите мне</strong>. 
+            
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item bg-white rounded-xl shadow-md border-l-4 border-pink-300 overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <button class="faq-question w-full text-left font-playfair text-xl font-bold p-6 flex justify-between items-center text-gray-800 group">
+                    <div class="flex items-center">
+                        <div class="bg-pink-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-clock text-pink-600"></i>
+                        </div>
+                        <span>Сколько времени займет наша совместная работа?</span>
+                    </div>
+                    <svg class="faq-icon h-5 w-5 text-pink-500 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="px-6 pb-6 pt-0 text-gray-700 leading-relaxed">
+                        Это зависит от вашего запроса и того, как вы себя чувствуете. Некоторые темы — как узел, который можно развязать за 5–10 встреч. Другие — глубже, и на них нужно больше времени. Мы будем двигаться в <strong>комфортном для вас темпе</strong>. Главное — вы не одни.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item bg-white rounded-xl shadow-md border-l-4 border-blue-300 overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <button class="faq-question w-full text-left font-playfair text-xl font-bold p-6 flex justify-between items-center text-gray-800 group">
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-heart-broken text-blue-600"></i>
+                        </div>
+                        <span>Что делать, если я не чувствую прогресса?</span>
+                    </div>
+                    <svg class="faq-icon h-5 w-5 text-blue-500 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="px-6 pb-6 pt-0 text-gray-700 leading-relaxed">
+                        Скажите мне об этом. Честно. Это не провал — это важный сигнал. Возможно, нам нужно изменить подход, или вы просто устали. Терапия — это не гонка. Иногда кажется, что вы стоите на месте, но внутри уже происходит движение.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item bg-white rounded-xl shadow-md border-l-4 border-purple-300 overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <button class="faq-question w-full text-left font-playfair text-xl font-bold p-6 flex justify-between items-center text-gray-800 group">
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-shield-alt text-purple-600"></i>
+                        </div>
+                        <span>Мне стыдно говорить о своих проблемах. Что делать?</span>
+                    </div>
+                    <svg class="faq-icon h-5 w-5 text-purple-500 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="px-6 pb-6 pt-0 text-gray-700 leading-relaxed">
+                        Это нормально. Многие так чувствуют. Но здесь нет «стыдных» тем. Вы не обязаны «рассказывать всё сразу». Мы начнём с того, что вам комфортно. Со временем вы почувствуете, что это пространство — <strong>безопасное</strong>. Как тёплый плед в холодный день.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item bg-white rounded-xl shadow-md border-l-4 border-orange-300 overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <button class="faq-question w-full text-left font-playfair text-xl font-bold p-6 flex justify-between items-center text-gray-800 group">
+                    <div class="flex items-center">
+                        <div class="bg-orange-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-wind text-orange-600"></i>
+                        </div>
+                        <span>Как управлять тревогой и стрессом?</span>
+                    </div>
+                    <svg class="faq-icon h-5 w-5 text-orange-500 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="px-6 pb-6 pt-0 text-gray-700 leading-relaxed">
+                        Мы не просто будем «бороться» с тревогой. Мы разберёмся, откуда она пришла. И подберём <strong>ваши личные инструменты</strong>: дыхание, якоря, когнитивные техники. То, что будет работать именно для вас.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item bg-white rounded-xl shadow-md border-l-4 border-teal-300 overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <button class="faq-question w-full text-left font-playfair text-xl font-bold p-6 flex justify-between items-center text-gray-800 group">
+                    <div class="flex items-center">
+                        <div class="bg-teal-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-hands text-teal-600"></i>
+                        </div>
+                        <span>Как улучшить отношения с собой и другими?</span>
+                    </div>
+                    <svg class="faq-icon h-5 w-5 text-teal-500 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="px-6 pb-6 pt-0 text-gray-700 leading-relaxed">
+                        Это начинается с себя. Мы посмотрим на ваши убеждения: «Я недостаточно хорош», «Меня не поймут». И будем выстраивать <strong>здоровые границы</strong>, учиться говорить «нет», не чувствуя вины.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item bg-white rounded-xl shadow-md border-l-4 border-indigo-300 overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <button class="faq-question w-full text-left font-playfair text-xl font-bold p-6 flex justify-between items-center text-gray-800 group">
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-leaf text-indigo-600"></i>
+                        </div>
+                        <span>Как поддерживать себя после терапии?</span>
+                    </div>
+                    <svg class="faq-icon h-5 w-5 text-indigo-500 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="px-6 pb-6 pt-0 text-gray-700 leading-relaxed">
+                        К концу терапии мы создадим <strong>ваш личный «чек-лист заботы»</strong>: какие техники работают, когда обращаться за поддержкой, как замечать первые признаки напряжения. Вы уйдёте не с пустыми руками, а с инструментами.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-item bg-white rounded-xl shadow-md border-l-4 border-green-300 overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <button class="faq-question w-full text-left font-playfair text-xl font-bold p-6 flex justify-between items-center text-gray-800 group">
+                    <div class="flex items-center">
+                        <div class="bg-green-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-seedling text-green-700"></i>
+                        </div>
+                        <span>Когда я увижу результаты?</span>
+                    </div>
+                    <svg class="faq-icon h-5 w-5 text-green-700 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="px-6 pb-6 pt-0 text-gray-700 leading-relaxed">
+                        Первые изменения — как ростки. Вы можете не замечать их, но они есть: вы стали чуть спокойнее, чуть мягче к себе. Устойчивые результаты приходят со временем, как дерево растёт — не за день, но верно.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-item bg-white rounded-xl shadow-md border-l-4 border-gray-300 overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <button class="faq-question w-full text-left font-playfair text-xl font-bold p-6 flex justify-between items-center text-gray-800 group">
+                    <div class="flex items-center">
+                        <div class="bg-gray-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-video text-gray-600"></i>
+                        </div>
+                        <span>Можно ли поговорить онлайн, если не могу прийти?</span>
+                    </div>
+                    <svg class="faq-icon h-5 w-5 text-gray-500 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="px-6 pb-6 pt-0 text-gray-700 leading-relaxed">
+                        Да, я провожу консультации онлайн через Zoom. Это так же безопасно и эффективно, как и очные встречи. Главное — вы чувствуете себя комфортно.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопка-призыв -->
+        <div class="text-center mt-12">
+            <p class="text-gray-600 mb-6">Не нашли свой вопрос?</p>
+            <a href="https://wa.me/37126037277?text=Здравствуйте!%20У%20меня%20есть%20вопрос" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold py-3 px-8 rounded-full hover:from-pink-600 hover:to-rose-600 transition transform hover:scale-105 shadow-md">
+                <i class="fab fa-whatsapp"></i>
+                Написать в WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <div class="section-divider"></div>
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Записаться на консультацию</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Левая колонка: Контактная информация -->
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Контактная информация</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4"><i class="fas fa-map-marker-alt text-pink-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Адрес</h4>
+                                <p class="text-gray-600">Latvija, Rīga, Skolas iela 12</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4"><i class="fas fa-phone-alt text-pink-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Телефон</h4>
+                                <p class="text-gray-600">
+                                    <a href="tel:+37126037277" class="hover:underline">+371 26037277</a><br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4"><i class="fas fa-envelope text-pink-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-600">ks.obuhova@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4"><i class="fas fa-clock text-pink-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Часы работы</h4>
+                                <p class="text-gray-600">Пн-Пт: 09:00 - 20:00</p>
+                                <p class="text-gray-600">Сб-Вс: 11:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Правая колонка: Форма/Кнопка WhatsApp -->
+                 <div class="md:w-1/2 flex items-center justify-center">
+                    <div class="bg-gray-50 rounded-2xl p-8 shadow-lg w-full max-w-md border border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Записаться на консультацию</h3>
+                        <p class="text-gray-600 mb-8 text-center">
+                            Самый быстрый и удобный способ записаться — написать мне напрямую в WhatsApp.
+                        </p>
+                        <a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20индивидуальную%20консультацию" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-green-400 to-teal-500 hover:from-green-500 hover:to-teal-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-md">
+                            <i class="fab fa-whatsapp text-2xl"></i> Написать в WhatsApp
+                        </a>
+                        <p class="text-gray-500 text-sm mt-4 text-center">Нажмите, чтобы начать чат.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Ксения Бодрихина</h3>
+                    <p class="max-w-xs">Профессиональная психологическая помощь с заботой и вниманием к каждому клиенту.</p>
+                </div>
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Rīga, Skolas iela 12
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <a href="tel:+37126037277" class="hover:underline">+371 26037277</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> ks.obuhova@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Подписаться</h4>
+                    <p class="mb-4">Будьте в курсе новостей и полезных материалов</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Ваш email" class="px-4 py-2 rounded-l-lg text-gray-800 focus:outline-none w-full">
+                        <button class="bg-pink-600 px-4 py-2 rounded-r-lg hover:bg-pink-700 transition"aria-label="Подписаться">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-pink-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2026 Ksenija Bodrihina. Все права защищены.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://www.instagram.com/ksenija_bodrihina/" target="_blank" rel="noopener" aria-label="Instagram Ксении Бодрихиной">
+    <i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.facebook.com/ksenija.obuhova" target="_blank" rel="noopener" aria-label="Facebook Ксении Бодрихиной">
+    <i class="fab fa-facebook-f"></i>
+</a>
+<a href="#" aria-label="Telegram Ксении Бодрихиной">
+    <i class="fab fa-telegram-plane"></i>
+</a>
+<a href="https://wa.me/37126037277" target="_blank" rel="noopener" aria-label="Написать Ксении в WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        
+    // Мобильное меню
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // Меняем иконку при открытии/закрытии
+        const icon = menuToggle.querySelector('i');
+        if (mobileMenu.classList.contains('hidden')) {
+            icon.classList.replace('fa-times', 'fa-bars');
+        } else {
+            icon.classList.replace('fa-bars', 'fa-times');
+        }
+    });
+
+    // Закрытие меню при клике на ссылку
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.replace('fa-times', 'fa-bars');
+        });
+    });
+
+    // Плавная прокрутка
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+        // FAQ
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    faqItems.forEach(other => {
+                        if (other !== item && other.classList.contains('faq-active')) {
+                            other.classList.remove('faq-active');
+                        }
+                    });
+                    item.classList.toggle('faq-active');
+                });
+            });
+        });
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Закрыть мобильное меню при клике
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+<!-- tsparticles CDN -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.min.js">
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth >= 768) { // Только для десктопа
+            tsParticles.load("tsparticles", {
+                fpsLimit: 60,
+                particles: {
+                    number: { value: 30, density: { enable: true, area: 800 } },
+                    color: { value: ["#ff7b9c", "#ffb6c1", "#ff69b4", "#f8bbd0"] },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.6, random: true },
+                    size: { value: 3, random: true },
+                    move: {
+                        enable: true,
+                        speed: 1,
+                        direction: "bottom",
+                        random: true,
+                        straight: false,
+                        outModes: "out",
+                        bounce: false
+                    },
+                    life: { duration: 10, count: 1 }
+                },
+                interactivity: { detectsOn: "canvas", events: { onHover: { enable: true, mode: "repulse" } } },
+                detectRetina: true,
+                background: { color: "transparent" }
+            });
+        }
+    });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17591249605"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17591249605');
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.service-toggle-btn');
+    const contentPanels = document.querySelectorAll('.service-content-panel');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Убираем активный класс со всех кнопок
+            toggleButtons.forEach(btn => btn.classList.remove('active-service-btn'));
+            // Добавляем активный класс нажатой кнопке
+            button.classList.add('active-service-btn');
+
+            const targetId = button.getAttribute('data-target');
+            const targetPanel = document.getElementById(targetId + '-content');
+
+            // Скрываем все панели
+            contentPanels.forEach(panel => {
+                panel.classList.remove('active-service-panel');
+            });
+
+            // Показываем нужную панель
+            if (targetPanel) {
+                targetPanel.classList.add('active-service-panel');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
