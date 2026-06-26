@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4 Всадника Апокалипсиса | Ксения Бодрихина</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <style>
+    /* Плавное появление карточек */
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.6s forwards; }
+    .fade-in:nth-child(1) { animation-delay: 0.2s; }
+    .fade-in:nth-child(2) { animation-delay: 0.4s; }
+    .fade-in:nth-child(3) { animation-delay: 0.6s; }
+    .fade-in:nth-child(4) { animation-delay: 0.8s; }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+ <section
+  id="horsemen"
+  class="relative py-16 bg-gradient-to-br from-indigo-900 to-indigo-700 text-white"
+>
+  <!-- Кнопка закрытия -->
+  <a
+    href="index.html"
+    class="absolute top-4 right-4 p-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-40 transition-colors"
+    aria-label="Вернуться на главную"
+  >
+    <i data-lucide="x" class="w-6 h-6 text-indigo-900"></i>
+  </a>
+
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">4 Всадника Апокалипсиса</h2>
+      <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+      <p class="max-w-3xl mx-auto text-lg">Разрушительные паттерны поведения, предсказывающие развал отношений с очень высокой точностью.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Всадник 1 -->
+      <div class="fade-in bg-white/90 p-6 rounded-2xl shadow-lg">
+        <div class="text-4xl text-red-500 mb-4">
+          <i data-lucide="message-square"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Критика</h3>
+        <p class="text-gray-800 mb-4">Атака на характер или личность вместо обсуждения конкретных действий.</p>
+        <div class="mt-4 bg-red-50 p-4 rounded-lg">
+          <p class="font-medium text-red-700">Антидот:</p>
+          <p class="text-gray-800">Мягкое начало разговора, «я‑высказывания».</p>
+        </div>
+      </div>
+
+      <!-- Всадник 2 -->
+      <div class="fade-in bg-white/90 p-6 rounded-2xl shadow-lg">
+        <div class="text-4xl text-yellow-400 mb-4">
+          <i data-lucide="shield"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Защита</h3>
+        <p class="text-gray-800 mb-4">Оправдания и встречные обвинения вместо принятия ответственности.</p>
+        <div class="mt-4 bg-yellow-50 p-4 rounded-lg">
+          <p class="font-medium text-yellow-800">Антидот:</p>
+          <p class="text-gray-800">Признание своей части ответственности.</p>
+        </div>
+      </div>
+
+      <!-- Всадник 3 -->
+      <div class="fade-in bg-white/90 p-6 rounded-2xl shadow-lg">
+        <div class="text-4xl text-green-400 mb-4">
+          <i data-lucide="smile-plus"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Презрение</h3>
+        <p class="text-gray-800 mb-4">Насмешки, сарказм и унижения — самый опасный из паттернов.</p>
+        <div class="mt-4 bg-green-50 p-4 rounded-lg">
+          <p class="font-medium text-green-800">Антидот:</p>
+          <p class="text-gray-800">Культивирование уважения и благодарности.</p>
+        </div>
+      </div>
+
+      <!-- Всадник 4 -->
+      <div class="fade-in bg-white/90 p-6 rounded-2xl shadow-lg">
+        <div class="text-4xl text-blue-400 mb-4">
+          <i data-lucide="slash"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Каменная стена</h3>
+        <p class="text-gray-800 mb-4">Уход от общения и эмоциональное отключение.</p>
+        <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+          <p class="font-medium text-blue-800">Антидот:</p>
+          <p class="text-gray-800">Физиологическое самоуспокоение и короткие перерывы.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.lucide) lucide.createIcons();
+  });
+</script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

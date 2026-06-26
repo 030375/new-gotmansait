@@ -1,0 +1,8 @@
+/* TEAM */
+Name: Ксения Бодрихина
+Role: Психолог, специалист по методу Готтмана
+
+/* SITE */
+Developed: 2026
+Hosting: Netlify
+
