@@ -1,0 +1,112 @@
+{
+  "version": "optimized-pass-1-foundation-navigation",
+  "files": [
+    {
+      "file": "00-foundation.css",
+      "chars": 5507,
+      "lines": 299,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "01-navigation.css",
+      "chars": 5020,
+      "lines": 278,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "02-hero-legacy.css",
+      "chars": 4264,
+      "lines": 212,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "03-about-diplomas.css",
+      "chars": 10512,
+      "lines": 518,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "04-gottman-services.css",
+      "chars": 17093,
+      "lines": 804,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "05-sections-contact-faq.css",
+      "chars": 8764,
+      "lines": 492,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "06-footer-mobile-modal.css",
+      "chars": 13819,
+      "lines": 652,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "07-utilities-articles-services-problems.css",
+      "chars": 16086,
+      "lines": 687,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "08-modern-addons.css",
+      "chars": 14970,
+      "lines": 779,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "09-final-overrides.css",
+      "chars": 5093,
+      "lines": 198,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    }
+  ],
+  "concat_diag": {
+    "brace_balance": 0,
+    "bad_closing_lines": [],
+    "open_comment": false,
+    "open_comment_start": null
+  },
+  "notes": [
+    "00-foundation.css rewritten: base tokens, reset, buttons, animations consolidated.",
+    "01-navigation.css rewritten: desktop + mobile navigation consolidated, updated mobile nav moved from 08-modern-addons.css.",
+    "08-modern-addons.css cleaned: duplicate mobile navigation block removed.",
+    "Legacy later files kept mostly intact to avoid visual regressions."
+  ],
+  "bad_patterns": {
+    "urlurl(": 0,
+    "nested_bad_media": 0,
+    "malformed_divider": 0
+  }
+}

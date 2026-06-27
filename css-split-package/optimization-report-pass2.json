@@ -1,0 +1,113 @@
+{
+  "version": "optimized-pass-2-hero-modern",
+  "files": [
+    {
+      "file": "00-foundation.css",
+      "chars": 5741,
+      "lines": 307,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "01-navigation.css",
+      "chars": 5020,
+      "lines": 278,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "02-hero-legacy.css",
+      "chars": 2939,
+      "lines": 192,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "03-about-diplomas.css",
+      "chars": 10512,
+      "lines": 518,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "04-gottman-services.css",
+      "chars": 17093,
+      "lines": 804,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "05-sections-contact-faq.css",
+      "chars": 8764,
+      "lines": 492,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "06-footer-mobile-modal.css",
+      "chars": 13819,
+      "lines": 652,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "07-utilities-articles-services-problems.css",
+      "chars": 16086,
+      "lines": 687,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "08-modern-addons.css",
+      "chars": 14907,
+      "lines": 776,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "09-final-overrides.css",
+      "chars": 5093,
+      "lines": 198,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    }
+  ],
+  "concat_diag": {
+    "brace_balance": 0,
+    "bad_closing_lines": [],
+    "open_comment": false,
+    "open_comment_start": null
+  },
+  "bad_patterns": {
+    "urlurl(": 0,
+    "nested_bad_media": 0,
+    "malformed_divider": 0,
+    "updated_mobile_navigation_duplicate_in_08": false
+  },
+  "notes": [
+    "02-hero-legacy.css rewritten as compact fallback for old hero classes.",
+    "08-modern-addons.css hero block rebuilt without changing the current mobile order: image first, text second.",
+    "Mobile navigation remains consolidated in 01-navigation.css.",
+    "Added prefers-reduced-motion rule in 00-foundation.css for accessibility and smoother mobile experience."
+  ]
+}

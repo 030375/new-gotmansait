@@ -1,0 +1,651 @@
+/* Базовые стили для подвала */
+        .footer {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            color: #fff;
+            padding: 60px 0 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #c53a9d, #667eea);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-card {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .footer-logo i {
+            color: #c53a9d;
+            font-size: 2rem;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-logo:hover i {
+            transform: scale(1.2);
+        }
+        
+        .footer-card p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #cbd5e0;
+            flex-grow: 1;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #c53a9d, #667eea);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-link:hover::before {
+            opacity: 1;
+        }
+        
+        .social-link i {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-title {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #c53a9d, #667eea);
+            border-radius: 3px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .footer-links a::before {
+            content: '•';
+            color: #c53a9d;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+        
+        .footer-links a:hover::before {
+            transform: scale(1.5);
+        }
+        
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            color: #cbd5e0;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-contact-item:hover {
+            color: #fff;
+        }
+        
+        .footer-contact-item i {
+            color: #c53a9d;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+        
+        /* Анимации */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .footer-logo i {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        /* Декоративные элементы */
+        .footer-decoration {
+            position: absolute;
+            opacity: 0.03;
+            z-index: 0;
+        }
+        
+        .decoration-1 {
+            top: 20%;
+            right: 10%;
+            font-size: 10rem;
+            color: #c53a9d;
+        }
+        
+        .decoration-2 {
+            bottom: 10%;
+            left: 5%;
+            font-size: 8rem;
+            color: #667eea;
+        }
+        
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px 20px;
+            }
+            
+            .decoration-1, .decoration-2 {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer {
+                padding: 40px 0 20px;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .footer-card {
+                text-align: center;
+            }
+            
+            .footer-logo {
+                justify-content: center;
+            }
+            
+            .footer-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .footer-contact-item {
+                justify-content: center;
+            }
+        }
+/* ==================== АДАПТИВНЫЕ ПРАВКИ ==================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .hero {
+    padding: 3rem 0;
+  }
+  /* Корректируем розовую плашку, чтобы она оставалась компактной */
+  .hero-title {
+    font-size: 0.9rem;    /* Оставляем шрифт небольшим */
+    padding: 8px 16px;    /* Делаем саму плашку чуть меньше */
+    margin-bottom: 1rem;  /* Уменьшаем отступ под ней */
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+  }
+  .diploma-card {
+    min-width: 12rem;
+  }
+  .profile-header {
+    justify-content: center;
+    text-align: center;
+  }
+  .profile-avatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .profile-footer {
+    justify-content: center;
+  }
+  .education-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-stats {
+    gap: 1.5rem;
+  }
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  .diploma-card {
+    min-width: 11rem;
+    padding: 0.75rem;
+  }
+  .diploma-card img {
+    height: 8rem;
+  }
+  .diplomas-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 1.5rem;
+    border-radius: 20px;
+    max-height: 95vh;
+  }
+  .test-question h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .test-option {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+  .close-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  .faq-question {
+    padding: 15px;
+  }
+  .faq-answer {
+    padding: 0 15px;
+  }
+  .faq-answer.open {
+    padding: 0 15px 15px;
+  }
+}
+/* ==================== ШРИФТЫ И ИКОНКИ ==================== */
+
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  font-size: inherit;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.btn-icon {
+  font-size: 1rem;
+  margin-right: 0.3rem;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* ==================== BODY MODAL OPEN ==================== */
+.body-modal-open {
+  overflow: hidden;
+}
+/* ==================== МОДАЛЬНОЕ ОКНО ТЕСТА ==================== */
+.test-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mobile-safe-area);
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.test-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(106, 27, 221, 0.4), rgba(249, 115, 22, 0.3));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.4s ease;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  color: #94a3b8;
+  z-index: 11;
+}
+
+.close-btn:hover {
+  background: #fef2f2;
+  border-color: var(--secondary);
+  color: var(--secondary);
+  transform: rotate(90deg);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.close-btn i {
+  width: 20px;
+  height: 20px;
+}
+
+/* ==================== СТИЛИ ТЕСТА ==================== */
+.test-question h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.test-options {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.test-option {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: var(--text);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.test-option:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(109, 40, 217, 0.15);
+}
+
+.test-option:active {
+  transform: scale(0.98);
+}
+
+.test-option.selected {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* ==================== РЕЗУЛЬТАТЫ ТЕСТА ==================== */
+.test-results {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.test-results h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+}
+
+.test-results p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.test-results p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ==================== КНОПКИ В МОДАЛЬНОМ ОКНЕ ==================== */
+.test-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.test-actions .btn {
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  display: block;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+/* Десктопный переключатель */
+.language-switcher-desktop {
+  margin-left: 20px;
+}
+
+/* Мобильный переключатель (скрыт по умолчанию) */
+.language-switcher-mobile {
+  display: none;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .language-switcher-desktop {
+    display: none;
+  }
+  
+  .language-switcher-mobile {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Дополнительные стили для правильного позиционирования */
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mobile-menu-btn {
+    order: 3; /* Кнопка меню всегда справа */
+  }
+  
+  .language-switcher-mobile {
+    order: 2; /* Переключатель перед кнопкой меню */
+  }
+  
+  .logo {
+    order: 1;
+  }
+}

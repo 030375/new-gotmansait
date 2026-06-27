@@ -1,0 +1,686 @@
+/*активный язык */
+.lang-link.active {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  pointer-events: none;
+}
+/* ======================================================= */
+/* === ИСПРАВЛЕНИЕ: Делаем видимыми иконки в Контактах === */
+/* Стили для секции статей */
+.blog-article-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+}
+
+.fa-spinner {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* ======================================================= */
+
+.contact-section .social-links .social-link {
+  color: var(--primary); /* Задаем иконкам основной розовый цвет */
+  background-color: var(--rose-50); /* Добавляем очень светлый розовый фон */
+  font-size: 1.5rem; /* Немного увеличим размер для акцента */
+}
+
+.contact-section .social-links .social-link:hover {
+  color: var(--white); /* При наведении делаем иконку белой */
+  background-color: var(--primary); /* А фон - насыщенным розовым */
+}
+/* ======================================================= */
+/* === ИСПРАВЛЕНИЕ: Возвращаем иконки в главном меню === */
+/* ======================================================= */
+
+.nav-links .nav-link .nav-icon {
+  display: inline-block !important; /* Гарантированно показываем иконку */
+  vertical-align: middle;          /* Выравниваем по центру с текстом */
+  margin-right: 8px;               /* Добавляем отступ справа от иконки */
+  font-size: 1.1em;                /* Устанавливаем адекватный размер */
+  opacity: 1 !important;           /* Убираем возможную прозрачность */
+  width: auto;                     /* Сбрасываем возможную нулевую ширину */
+}
+/* ======================================= */
+/* ИСПРАВЛЕНИЕ КОНТРАСТНОСТИ ДЛЯ FAQ       */
+/* ======================================= */
+#faq .section-title p {
+  color: var(--text, #1e293b); /* Используем основной цвет текста для высокой контрастности */
+}
+/* ======================================= */
+/* СТИЛИ ДЛЯ ПРОГРЕССИВНОЙ ЗАГРУЗКИ        */
+/* ======================================= */
+.progressive-image {
+  filter: blur(10px); /* Сильно размываем заглушку */
+  transition: filter 0.3s ease-in-out; /* Анимация для плавного появления */
+}
+.progressive-image.loaded {
+  filter: blur(0); /* Убираем размытие, когда качественное фото загружено */
+}
+/* ======================================= */
+/* === СТИЛИ ДЛЯ СЕКЦИИ СТАТЕЙ           */
+/* ======================================= */
+
+/* Мы используем существующий класс .articles-section из вашего HTML */
+.articles-section .love-insight-root {
+  font-family: 'Inter', sans-serif; /* Наследуем основной шрифт */
+  line-height: 1.8;
+  color: #333;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #e74c3c 100%);
+  padding: 40px 0;
+  overflow-x: hidden;
+}
+
+.articles-section .section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white; /* Цвет для заголовка на градиентном фоне */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  margin-bottom: 10px;
+}
+
+.articles-section .section-header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.articles-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex; /* Используем flex для структуры */
+  flex-direction: column;
+  flex: 1 1 100%; /* Адаптивность для мобильных */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Адаптивная сетка для статей */
+@media (min-width: 768px) {
+  .article-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+@media (min-width: 1024px) {
+  .article-card {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+  }
+}
+
+.article-header {
+  text-align: center;
+  padding: 32px 20px;
+  background: linear-gradient(135deg, #d81b60 0%, #c2185b 100%);
+  color: white;
+}
+
+.article-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  color: white; /* Явное указание цвета */
+}
+
+.article-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 8px;
+}
+
+.article-content {
+  padding: 28px 20px;
+  flex-grow: 1; /* Позволяет контенту занимать все доступное место */
+}
+
+.article-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  color: #2c3e50;
+  margin: 22px 0 14px;
+}
+
+.article-content h3 i {
+  color: #d81b60;
+  font-size: 1.1em;
+  margin-right: 10px;
+}
+
+.article-content ul {
+  list-style: none; /* Убираем стандартные маркеры */
+  padding-left: 20px;
+  margin: 14px 0;
+}
+
+.article-content li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.article-content li::before {
+  content: "•";
+  color: #e74c3c;
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+}
+
+.quote {
+  font-style: italic;
+  background: #f9f9f9;
+  padding: 16px;
+  border-left: 4px solid #e74c3c;
+  border-radius: 0 10px 10px 0;
+  margin: 20px 0;
+}
+
+.article-content .highlight {
+  background: #fff8e1; /* Желтоватый фон */
+  padding: 16px;
+  border-radius: 10px;
+  border-left: 4px solid #f39c12; /* Оранжевая полоска */
+  margin: 20px 0;
+  font-weight: 500;
+  color: #d35400; /* Темно-оранжевый текст */
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.article-content .personal {
+  background: #e8f5e9; /* Зеленоватый фон */
+  padding: 16px;
+  border-radius: 10px;
+  font-style: italic;
+  color: #27ae60; /* Зеленый текст */
+  border-left: 4px solid #2ecc71; /* Ярко-зеленая полоска */
+  margin: 20px 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* На всякий случай добавим и этот стиль, если он где-то используется */
+.article-content .cta-box {
+  text-align: center;
+  padding: 20px 16px;
+  background: #f0f7ff;
+  border-radius: 12px;
+  margin: 22px 0;
+  border: 1px solid #d0ebff;
+  font-weight: 500;
+  color: #27ae60;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.read-more-btn {
+  display: block;
+  width: auto; /* Авто-ширина для кнопок */
+  padding: 16px 30px;
+  background: #d81b60;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 22px auto 0; /* Центрирование кнопки */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.read-more-btn:hover {
+  background: #c2185b;
+  transform: translateY(-2px);
+}
+
+.more-content {
+  display: none; /* Скрываем дополнительный контент по умолчанию */
+}
+
+#load-more-articles i {
+  margin-right: 8px; /* Добавляем отступ для иконки в кнопке */
+}
+
+
+/* ======================================= */
+/* === СТИЛИ ДЛЯ ПОДВАЛА (FOOTER)        */
+/* ======================================= */
+
+/* Мы будем дополнять существующий класс .footer из вашего HTML */
+.footer {
+  color: white;
+  background: #1a1a1a;
+}
+
+.footer-grid, .footer-bottom, .footer-info {
+  position: relative; /* Чтобы контент был поверх декора */
+  z-index: 2;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #00d1b2; /* Акцентный цвет при наведении */
+}
+
+/* Декоративные элементы в подвале */
+.footer-decoration {
+  position: absolute;
+  color: white;
+  opacity: 0.05;
+  z-index: 1;
+  user-select: none;
+}
+.decoration-1 { top: 10%; right: 5%; font-size: 5rem; }
+.decoration-2 { bottom: 5%; left: 10%; font-size: 4rem; }
+.decoration-3 { top: 50%; left: 45%; font-size: 6rem; }
+
+.footer-contact-item .contact-link {
+  color: white;
+}
+
+.footer-contact-item i {
+  color: #00d1b2; /* Иконки — акцентным цветом */
+}
+
+.footer-bottom a {
+  color: #aaa;
+}
+
+.footer-bottom a:hover {
+  color: white;
+}
+/* === ИСПРАВЛЕНИЕ КОНТРАСТНОСТИ В ПОДВАЛЕ === */
+/* ======================================= */
+
+.footer .footer-title {
+  color: #FFFFFF; /* Делаем заголовки чисто-белыми и максимально контрастными */
+}
+
+/* ======================================= */
+/* === НОВЫЕ СТИЛИ ДЛЯ СЕКЦИИ УСЛУГ      */
+/* ======================================= */
+
+/* Адаптивная сетка для 3-х карточек */
+@media (min-width: 992px) {
+  .services-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .services-grid-3 {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* Стиль для рекомендованной карточки */
+.service-card.recommended {
+  transform: scale(1.03);
+  border: 2px solid var(--primary);
+  box-shadow: 0 20px 50px rgba(225, 29, 72, 0.2);
+}
+
+.service-card.recommended:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+/* Стиль для значка "Экономия" */
+.service-badge {
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  background: linear-gradient(45deg, var(--accent), #f59e0b);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transform: rotate(10deg);
+  z-index: 3;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: 2px solid white;
+}
+
+/* Стиль для зачеркнутой старой цены */
+.service-price .price-old {
+  text-decoration: line-through;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+/* Новый стиль для иконки очной встречи */
+.dark-icon {
+  background: linear-gradient(135deg, #4b5563, #1f2937);
+}
+.dark-icon i {
+  color: var(--white);
+}
+
+/* Новый стиль для предупреждения */
+.warning-notice {
+  background: #fffbeb;
+  border-left: 4px solid #f59e0b;
+  margin: 0 20px 30px;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+.warning-notice p {
+  color: #b45309;
+}
+.warning-notice i {
+  color: #f59e0b;
+  font-size: 1.3rem;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Улучшение читаемости списка преимуществ */
+.service-features li strong {
+  color: var(--secondary);
+}
+
+/* Меняем иконку для онлайн-терапии в карточке */
+.service-icon .fa-laptop-medical {
+    font-size: 2rem;
+}
+/* ======================================= */
+/* === НОВЫЕ СТИЛИ ДЛЯ СЕКЦИИ УСЛУГ v2   */
+/* ======================================= */
+
+/* Адаптивная сетка для 4-х карточек */
+.services-grid-4 {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr; /* По умолчанию одна колонка для мобильных */
+}
+
+@media (min-width: 768px) {
+  .services-grid-4 {
+    grid-template-columns: repeat(2, 1fr); /* Две колонки на планшетах */
+  }
+}
+
+/* Выравнивание карточек, чтобы они были одной высоты */
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+.service-body {
+  flex-grow: 1;
+  padding: 25px;
+}
+
+/* Убираем лишние отступы у старого класса */
+.service-features {
+  padding: 0;
+}
+
+/* Стили для новых заголовков внутри карточек */
+.service-body h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.service-body h4:first-of-type {
+  margin-top: 0;
+}
+
+/* Стили для списка преимуществ */
+.format-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.format-benefits li {
+  color: var(--text);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+}
+.format-benefits li .icon {
+  color: #10b981; /* Зеленый цвет для иконок преимуществ */
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+/* Убираем отступ у уведомления, если оно последнее в блоке */
+.service-body .warning-notice {
+  margin-top: 25px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0; /* Убираем нижний отступ */
+}
+
+/* Переносим кнопку записи внутрь карточки и добавляем отступ */
+.service-button {
+  margin: 25px;
+  margin-top: auto; /* Прижимает кнопку к низу */
+}
+/* ======================================= */
+/* === СТИЛИ ДЛЯ СЕТКИ УСЛУГ (3 КАРТЫ)  === */
+/* ======================================= */
+
+
+/* Сбрасываем предыдущие правила для сеток, если они есть */
+.services-grid-4, .services-grid-2 {
+  grid-template-columns: 1fr !important;
+}
+
+/* Настраиваем основную сетку */
+.services-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr; /* 1 колонка на мобильных по умолчанию */
+}
+
+/* На планшетах делаем одну колонку и центрируем */
+@media (min-width: 768px) and (max-width: 991px) {
+  .services-grid-3 {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* 3 колонки для десктопов */
+@media (min-width: 992px) {
+  .services-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Новый стиль для информационного уведомления */
+.info-notice {
+  background: #eef2ff;
+  border-left: 4px solid var(--indigo-600);
+  margin: 25px 0 0 0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+.info-notice p {
+  color: #3730a3;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.info-notice i {
+  color: var(--indigo-600);
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+/* ======================================= */
+/* === СТИЛИ ДЛЯ БЛОКА "С КАКИМИ ЗАПРОСАМИ" === */
+/* ======================================= */
+.problems-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .problems-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .problems-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.problem-card {
+  background-color: white;
+  border-radius: var(--rounded-2xl, 1rem);
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(0,0,0,0.1));
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-light, #fecdd3);
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl, 0 20px 25px rgba(0,0,0,0.1));
+  border-top-color: var(--primary, #e11d48);
+}
+
+.problem-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--primary-light, #fecdd3), var(--primary, #e11d48));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 15px rgba(225, 29, 72, 0.3);
+}
+
+.problem-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary, #0f172a);
+  margin-bottom: 10px;
+}
+
+.problem-description {
+  font-size: 0.95rem;
+  color: var(--text-light, #64748b);
+  line-height: 1.6;
+}
+/* ==================== СПЕЦИАЛЬНЫЙ БЛОК: ВОССТАНОВЛЕНИЕ ДОВЕРИЯ ==================== */
+.infidelity-banner {
+  padding: 0 0 80px 0;
+  background: #fdf2f8; /* Продолжение фона секции проблем */
+}
+
+.infidelity-content {
+  background: linear-gradient(135deg, #ffffff 0%, #fff1f2 100%);
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(225, 29, 72, 0.08);
+  border: 1px solid rgba(225, 29, 72, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Фоновая декоративная иконка */
+.infidelity-content::before {
+  content: '\f21e'; /* heart-beat */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  font-size: 16rem;
+  color: rgba(225, 29, 72, 0.03);
+  top: -20px;
+  right: -30px;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.infidelity-icon {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 2.5rem;
+  color: var(--primary);
+  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.infidelity-content h2 {
+  font-size: 2.2rem;
+  color: var(--secondary);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.infidelity-content p {
+  font-size: 1.1rem;
+  color: #334155;
+  max-width: 850px;
+  margin: 0 auto 15px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-infidelity {
+  margin-top: 25px;
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  padding: 16px 35px;
+}
+
+@media (max-width: 768px) {
+  .infidelity-content { padding: 40px 20px; }
+  .infidelity-content h2 { font-size: 1.6rem; margin-bottom: 15px; }
+  .infidelity-content p { font-size: 1rem; }
+  .btn-infidelity { width: 100%; }
+}

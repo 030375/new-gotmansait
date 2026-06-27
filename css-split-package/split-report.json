@@ -1,0 +1,157 @@
+{
+  "files": [
+    {
+      "file": "00-foundation.css",
+      "chars": 4300,
+      "lines": 183,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "01-navigation.css",
+      "chars": 3504,
+      "lines": 206,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "02-hero-legacy.css",
+      "chars": 4335,
+      "lines": 214,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "03-about-diplomas.css",
+      "chars": 10586,
+      "lines": 520,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "04-gottman-services.css",
+      "chars": 17169,
+      "lines": 806,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "05-sections-contact-faq.css",
+      "chars": 8844,
+      "lines": 494,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "06-footer-mobile-modal.css",
+      "chars": 13898,
+      "lines": 654,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "07-utilities-articles-services-problems.css",
+      "chars": 16182,
+      "lines": 689,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "08-modern-addons.css",
+      "chars": 17962,
+      "lines": 900,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    },
+    {
+      "file": "09-final-overrides.css",
+      "chars": 5168,
+      "lines": 200,
+      "brace_balance": 0,
+      "bad_closing_lines": [],
+      "open_comment": false,
+      "open_comment_start": null
+    }
+  ],
+  "concat_diag": {
+    "brace_balance": 0,
+    "bad_closing_lines": [],
+    "open_comment": false,
+    "open_comment_start": null
+  },
+  "known_bad_patterns_after_fix": {
+    "urlurl(": 0,
+    "nested @media after hero padding": 0,
+    "malformed service divider": 0
+  },
+  "markers": [
+    {
+      "file": "00-foundation.css",
+      "pos": 0,
+      "line": 1
+    },
+    {
+      "file": "01-navigation.css",
+      "pos": 4231,
+      "line": 182
+    },
+    {
+      "file": "02-hero-legacy.css",
+      "pos": 7665,
+      "line": 385
+    },
+    {
+      "file": "03-about-diplomas.css",
+      "pos": 11930,
+      "line": 597
+    },
+    {
+      "file": "04-gottman-services.css",
+      "pos": 22442,
+      "line": 1114
+    },
+    {
+      "file": "05-sections-contact-faq.css",
+      "pos": 39535,
+      "line": 1917
+    },
+    {
+      "file": "06-footer-mobile-modal.css",
+      "pos": 48299,
+      "line": 2408
+    },
+    {
+      "file": "07-utilities-articles-services-problems.css",
+      "pos": 62119,
+      "line": 3060
+    },
+    {
+      "file": "08-modern-addons.css",
+      "pos": 78206,
+      "line": 3747
+    },
+    {
+      "file": "09-final-overrides.css",
+      "pos": 96095,
+      "line": 4644
+    }
+  ]
+}
