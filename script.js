@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-    // =================================================================================
-    // === 1. КРИТИЧЕСКИ ВАЖНЫЙ КОД (Выполняется сразу) =================================
-    // =================================================================================
-
+    // === 1. МОБИЛЬНОЕ МЕНЮ ===
     function initMobileMenu() {
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
@@ -30,24 +26,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function initProgressiveImage() {
+    // === 2. ПРОГРЕССИВНАЯ ЗАГРУЗКА ИЗОБРАЖЕНИЙ ===
+    function initProgressiveImage() { 
         const heroImage = document.querySelector('.progressive-image');
         if (!heroImage) return;
 
         const highResImage = new Image();
         highResImage.onload = () => {
             heroImage.src = heroImage.dataset.src;
-            if (heroImage.dataset.srcset) {
-                heroImage.srcset = heroImage.dataset.srcset;
-            }
+            if (heroImage.dataset.srcset) heroImage.srcset = heroImage.dataset.srcset;
             heroImage.classList.add('loaded');
         };
         highResImage.src = heroImage.dataset.src;
-        if (heroImage.dataset.srcset) {
-            highResImage.srcset = heroImage.dataset.srcset;
-        }
+        if (heroImage.dataset.srcset) highResImage.srcset = heroImage.dataset.srcset;
     }
 
+    // === 3. ПЛАВНЫЙ СКРОЛЛ ===
     function initSmoothScroll() {
         document.querySelectorAll('a[href^="#"]:not([href="#"]):not(.js-start-test-btn)').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -60,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // === 4. ОТСЛЕЖИВАНИЕ КОНВЕРСИЙ (WhatsApp) ===
     function initConversionTracking() {
         document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
             link.addEventListener('click', () => {
@@ -68,54 +63,49 @@ document.addEventListener('DOMContentLoaded', function () {
                 let eventLabel = 'whatsapp_click';
                 if (url.includes('Парную')) eventLabel = 'whatsapp_couple';
                 else if (url.includes('Индивидуальную')) eventLabel = 'whatsapp_individual';
-                else if (url.includes('contact')) eventLabel = 'whatsapp_contact_form';
-                safeGtag('event', 'conversion', {'send_to': 'AW-17591249605/FZ8cCNi8358bEMXVlMRB','event_category': 'Конверсия','event_label': eventLabel});
+                
+                safeGtag('event', 'conversion', {
+                    'send_to': 'AW-17591249605/FZ8cCNi8358bEMXVlMRB',
+                    'event_category': 'Конверсия',
+                    'event_label': eventLabel
+                });
             });
         });
 
         document.querySelectorAll('.js-start-test-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 if (typeof safeGtag !== 'function') return;
-                safeGtag('event', 'conversion', {'send_to': 'AW-17591249605/FZ8cCNi8358bEMXVlMRB','event_category': 'Конверсия','event_label': 'Нажатие_Теста'});
+                safeGtag('event', 'conversion', {
+                    'send_to': 'AW-17591249605/FZ8cCNi8358bEMXVlMRB',
+                    'event_category': 'Конверсия',
+                    'event_label': 'Нажатие_Теста'
+                });
             });
         });
     }
 
-    // Присваиваем ID слайдам СРАЗУ для доступности
-    function assignCarouselSlideIds() {
-        const slides = document.querySelectorAll('.diploma-card');
-        slides.forEach((slide, index) => {
-            slide.id = `slide${index + 1}`;
-        });
-    }
-
-    // --- ЗАПУСКАЕМ ТОЛЬКО САМОЕ ВАЖНОЕ ---
+    // === 5. ИНИЦИАЛИЗАЦИЯ ===
     initMobileMenu();
     initProgressiveImage();
     initSmoothScroll();
     initConversionTracking();
-    assignCarouselSlideIds();
 
-
-    // =================================================================================
-    // === 2. ЛЕНИВАЯ ИНИЦИАЛИЗАЦИЯ КОМПОНЕНТОВ (По мере прокрутки) ======================
-    // =================================================================================
-
-    const lazySections =[
+    // Ленивая загрузка секций (оставляем вашу логику, она отличная)
+    const lazySections = [
         { id: 'diploma-carousel', init: initCarousel },
         { id: 'testModal', init: initTestModal },
         { id: 'faq', init: initFaqAccordion },
         { id: 'articles', init: initArticleLoader }
     ];
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const section = lazySections.find(s => s.id === entry.target.id);
                 if (section && !section.initialized) {
                     section.init();
                     section.initialized = true;
-                    observer.unobserve(entry.target);
+                    obs.unobserve(entry.target);
                 }
             }
         });
@@ -123,10 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     lazySections.forEach(section => {
         const element = document.getElementById(section.id);
-        if (element) {
-            observer.observe(element);
-        }
+        if (element) observer.observe(element);
     });
+
+  
 
     // =================================================================================
     // === 3. ОПРЕДЕЛЕНИЕ ФУНКЦИЙ ДЛЯ ЛЕНИВОЙ ЗАГРУЗКИ =================================
