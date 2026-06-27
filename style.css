@@ -8,7 +8,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/inter/inter-v19-latin-regular.woff2') format('woff2');
+  src: url('fonts/inter/inter-v19-latin-regular.woff2') format('woff2');
   font-display: swap; /* ✅ И СЮДА ТОЖЕ */
 }
 
@@ -16,7 +16,7 @@
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/playfair-display/playfair-display-v39-latin-700.woff2') format('woff2');
+  src: url('fonts/playfair-display/playfair-display-v39-latin-700.woff2') format('woff2');
   font-display: swap; /* ✅ САМОЕ ВАЖНОЕ ИСПРАВЛЕНИЕ */
 }
 
@@ -573,7 +573,7 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   border: 8px solid white;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-}
+
 }
 /* ==================== АНИМАЦИИ ==================== */
 @keyframes fadeIn {
@@ -3058,7 +3058,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/*активный язык
+/*активный язык */
 .lang-link.active {
   font-weight: bold;
   color: #000;
@@ -3066,7 +3066,7 @@ h1, h2, h3, h4 {
   pointer-events: none;
 }
 /* ======================================================= */
-/* === ИСПРАВЛЕНИЕ: Делаем видимыми иконки в Контактах === /* Стили для секции статей */
+/* === ИСПРАВЛЕНИЕ: Делаем видимыми иконки в Контактах === Стили для секции статей */
 .blog-article-section {
     padding: 4rem 0;
     background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
@@ -3081,7 +3081,7 @@ h1, h2, h3, h4 {
 .fa-spinner {
     font-size: 2rem;
     margin-bottom: 1rem;
-}*/
+}
 /* ======================================================= */
 
 .contact-section .social-links .social-link {
@@ -3551,7 +3551,7 @@ h1, h2, h3, h4 {
 * ======================================= */
 /* === СТИЛИ ДЛЯ СЕТКИ УСЛУГ (3 КАРТЫ)  === */
 /* ======================================= */
-}
+
 
 /* Сбрасываем предыдущие правила для сеток, если они есть */
 .services-grid-4, .services-grid-2 {
