@@ -918,19 +918,17 @@ Also available in English: couples therapy in Riga based on Gottman Method.
           <form class="form" aria-label="Форма записи на консультацию">
             <div class="form-group">
               <label for="name" class="form-label">Ваше имя</label>
-              <input type="text" id="name" name="name" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label for="phone" class="form-label">Телефон</label>
-              <input type="tel" id="phone" name="phone" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label for="service" class="form-label">Услуга</label>
-              <select id="service" name="service" class="form-input form-select" required>
-                <option value="">Выберите услугу</option>
-                <option value="couple">Парная терапия (€100/90 мин)</option>
-                <option value="individual">Индивидуальная консультация (€50/60 мин)</option>
-              </select>
+             
+<input type="text" id="name" name="name" class="form-input" autocomplete="name" required>
+
+<input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" required>
+
+<select id="service" name="service" class="form-input form-select" autocomplete="off" required>
+  <option value="">Выберите услугу</option>
+  <option value="couple">Парная терапия (€100/90 мин)</option>
+  <option value="individual">Индивидуальная консультация (€50/60 мин)</option>
+</select>
+
             </div>
             <div class="form-group">
               <label for="message" class="form-label">Сообщение (необязательно)</label>
