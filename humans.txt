@@ -1,8 +1,17 @@
 /* TEAM */
 Name: Ксения Бодрихина
-Role: Психолог, специалист по методу Готтмана
+Role: Семейный психолог, специалист по методу Готтмана
+Location: Riga, Latvia
+Website: https://gottmanterapija.lv
+Contact: ks.obuhova@gmail.com
 
 /* SITE */
+Site name: Gottman Terapija
+Description: Семейный психолог в Риге. Парная терапия и консультации по методу Готтмана.
+Language: Russian, Latvian
 Developed: 2026
 Hosting: Netlify
+
+/* THANKS */
+Thanks to visitors, clients and everyone interested in healthy relationships.
 
