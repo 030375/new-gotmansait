@@ -8,7 +8,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('fonts/inter/inter-v19-latin-regular.woff2') format('woff2');
+  src: url('/fonts/inter/inter-v19-latin-regular.woff2') format('woff2');
   font-display: swap; /* ✅ И СЮДА ТОЖЕ */
 }
 
@@ -16,7 +16,7 @@
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 700;
-  src: url('fonts/playfair-display/playfair-display-v39-latin-700.woff2') format('woff2');
+  src: url('/fonts/playfair-display/playfair-display-v39-latin-700.woff2') format('woff2');
   font-display: swap; /* ✅ САМОЕ ВАЖНОЕ ИСПРАВЛЕНИЕ */
 }
 
