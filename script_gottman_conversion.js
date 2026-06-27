@@ -395,6 +395,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadGottmanArticle('articles/den-surka.html', 'gottman-article1');
         loadGottmanArticle('articles/on-ne-slyshit.html', 'gottman-article2');
         loadGottmanArticle('articles/metod_gotmana.html', 'gottman-article3');
+loadGottmanArticle('articles/5_sohibok.html', 'gottman-article4');
     }
 
     // =================================================================================
