@@ -37,8 +37,8 @@
   <meta name="geo.position" content="56.9496;24.1052">
   <meta name="ICBM" content="56.9496, 24.1052">
 
-  <!-- Асинхронная загрузка основных стилей -->
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <!-- Основные стили: грузим синхронно, чтобы не было FOUC и большого CLS -->
+  <link rel="stylesheet" href="style.css">
   
 
 
@@ -48,7 +48,6 @@
   <!-- Предзагрузка ключевых ресурсов -->
   <link rel="preload" href="fonts/inter/inter-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/playfair-display/playfair-display-v39-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/fontawesome/css/all.min.css" as="style">
   <link rel="preload"
         href="img/ksenija-hero-medium.webp"
         as="image"
@@ -93,6 +92,29 @@
     ]
   }
   </script>
+
+  <style>
+    /* Critical stability fixes: снижают CLS до загрузки вторичных ресурсов */
+    html { scroll-behavior: smooth; }
+    body { margin: 0; overflow-x: hidden; }
+    .navbar { min-height: 72px; }
+    .hero-modern { min-height: 620px; }
+    .hero-content { display: grid; gap: 32px; align-items: center; }
+    .hero-photo-card { width: min(420px, 100%); aspect-ratio: 4 / 5; position: relative; }
+    .hero-photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .fas, .fab { display: inline-block; width: 1.1em; min-width: 1.1em; line-height: 1; text-align: center; }
+    .diplomas-gallery-wrapper { overflow: hidden; }
+    .diploma-carousel { display: flex; gap: 16px; }
+    .diploma-card { flex: 0 0 min(513px, 100%); }
+    .diploma-image-wrapper { aspect-ratio: 513 / 362; overflow: hidden; background: #f8fafc; }
+    .diploma-image-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    #diplomaLightbox { contain: layout paint; }
+    #lightboxImage { width: min(92vw, 1100px); height: auto; max-height: 88vh; object-fit: contain; display: block; aspect-ratio: 4 / 3; }
+    .map-container iframe { width: 100%; min-height: 360px; border: 0; display: block; }
+    .article-card:empty { display: none; }
+    @media (min-width: 1024px) { .hero-content { grid-template-columns: minmax(0,1fr) 420px; } }
+    @media (max-width: 767px) { .hero-modern { min-height: 760px; } .navbar { min-height: 64px; } }
+  </style>
 </head>
 <body>
   <!-- Модальное окно теста -->
@@ -1222,22 +1244,27 @@ Also available in English: couples therapy in Riga based on Gottman Method.
         <p class="footer-privacy"><a href="privacy.html">Политика конфиденциальности</a></p>
       </div>
     </div>
-  </footer>  <!-- Google tag (gtag.js): delayed so it does not compete with initial LCP rendering -->
+  </footer>  <!-- Google tag (gtag.js): загружаем после первого взаимодействия или с большой задержкой -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  window.addEventListener('load', function () {
-    var loadGtag = function () {
+  (function () {
+    var loaded = false;
+    function loadGtag() {
+      if (loaded) return;
+      loaded = true;
       var s = document.createElement('script');
       s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17591249605';
       s.async = true;
       document.head.appendChild(s);
       gtag('js', new Date());
       gtag('config', 'AW-17591249605');
-    };
-    if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, { timeout: 3000 });
-    else setTimeout(loadGtag, 2000);
-  });
+    }
+    ['click','scroll','keydown','touchstart'].forEach(function (eventName) {
+      window.addEventListener(eventName, loadGtag, { once: true, passive: true });
+    });
+    setTimeout(loadGtag, 6000);
+  })();
 </script>
   <script src="script.js" defer></script>
 
