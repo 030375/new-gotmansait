@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -49,12 +49,18 @@
   <link rel="preload" href="fonts/inter/inter-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/playfair-display/playfair-display-v39-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/fontawesome/css/all.min.css" as="style">
-  <link rel="preload" href="img/ksenija-hero-medium.webp" as="image" type="image/webp">
+  <link rel="preload"
+        href="img/ksenija-hero-medium.webp"
+        as="image"
+        type="image/webp"
+        fetchpriority="high"
+        imagesrcset="img/ksenija-hero-small.webp 300w, img/ksenija-hero-medium.webp 400w, img/ksenija-hero-large.webp 800w"
+        imagesizes="(max-width: 1023px) 280px, 420px">
 
-  <!-- Подключение стилей иконок -->
-  <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
-
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💑</text></svg>">
+  <!-- Подключение стилей иконок: не блокируем первый рендер -->
+  <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="fonts/fontawesome/css/all.min.css"></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💑</text></svg>">
 
   <script type="application/ld+json">
   {
@@ -423,7 +429,7 @@
                 <!-- Слайд 1 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 1">
                   <div class="diploma-image-wrapper">
-                    <img src="img/gotman2.jpg" alt="Сертификат 2 уровня по методу Готтмана" loading="lazy">
+                    <img src="img/gotman2.jpg" alt="Сертификат 2 уровня по методу Готтмана" loading="lazy" decoding="async" width="293" height="207">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -434,7 +440,7 @@
   <!-- Слайд 2 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 2">
                   <div class="diploma-image-wrapper">
-                    <img src="img/GOTMAN_Level 1_opt.webp" alt="Сертификат 1 уровня по методу Готтмана" loading="lazy">
+                    <img src="img/GOTMAN_Level 1_opt.webp" alt="Сертификат 1 уровня по методу Готтмана" loading="lazy" decoding="async">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -445,7 +451,7 @@
   <!-- Слайд 3 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 3">
                   <div class="diploma-image-wrapper">
-                    <img src="img/izmena.jpg" alt="Обучение Востановление доверия" loading="lazy">
+                    <img src="img/izmena.jpg" alt="Обучение Востановление доверия" loading="lazy" decoding="async" width="292" height="207">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -457,7 +463,7 @@
                 <!-- Слайд 4 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 4">
                   <div class="diploma-image-wrapper">
-                    <img src="img/diplom_opt.webp" alt="Диплом от RSU" loading="lazy">
+                    <img src="img/diplom_opt.webp" alt="Диплом от RSU" loading="lazy" decoding="async">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -468,7 +474,7 @@
 <!-- Слайд 5 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 5">
                   <div class="diploma-image-wrapper">
-                    <img src="img/semejnnyj rastanow_opt.webp" alt="Семейные расстановки" loading="lazy">
+                    <img src="img/semejnnyj rastanow_opt.webp" alt="Семейные расстановки" loading="lazy" decoding="async">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -480,7 +486,7 @@
                 <!-- Слайд 6 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 6">
                   <div class="diploma-image-wrapper">
-                    <img src="img/couch profesional level_opt.webp" alt="Сертификат коучинга" loading="lazy">
+                    <img src="img/couch profesional level_opt.webp" alt="Сертификат коучинга" loading="lazy" decoding="async">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -492,7 +498,7 @@
                 <!-- Слайд 7 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 7">
                   <div class="diploma-image-wrapper">
-                    <img src="img/Profi couch_opt.webp" alt="Профессиональный коуч" loading="lazy">
+                    <img src="img/Profi couch_opt.webp" alt="Профессиональный коуч" loading="lazy" decoding="async">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -504,7 +510,7 @@
                 <!-- Слайд 8 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 8">
                   <div class="diploma-image-wrapper">
-                    <img src="img/NLP_opt.webp" alt="НЛП Практик" loading="lazy">
+                    <img src="img/NLP_opt.webp" alt="НЛП Практик" loading="lazy" decoding="async">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -518,7 +524,7 @@
                 <!-- Слайд 9 -->
                 <div class="diploma-card" role="group" aria-roledescription="slide" aria-label="Слайд 9">
                   <div class="diploma-image-wrapper">
-                    <img src="img/wnutr hastej_opt.webp" alt="Работа с внутренними частями" loading="lazy">
+                    <img src="img/wnutr hastej_opt.webp" alt="Работа с внутренними частями" loading="lazy" decoding="async">
                     <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
                   </div>
                   <div class="diploma-info">
@@ -540,7 +546,7 @@
             <div class="lightbox-backdrop"></div>
             <button class="lightbox-close" aria-label="Закрыть"><i class="fas fa-times"></i></button>
             <div class="lightbox-content">
-              <img id="lightboxImage" src="" alt="Увеличенный диплом">
+              <img id="lightboxImage" src="" alt="Увеличенный диплом" width="1100" height="825" decoding="async">
             </div>
           </div>
  </div> 
@@ -921,8 +927,10 @@ Also available in English: couples therapy in Riga based on Gottman Method.
              
 <input type="text" id="name" name="name" class="form-input" autocomplete="name" required>
 
+<label for="phone" class="form-label">Телефон</label>
 <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" required>
 
+<label for="service" class="form-label">Услуга</label>
 <select id="service" name="service" class="form-input form-select" autocomplete="off" required>
   <option value="">Выберите услугу</option>
   <option value="couple">Парная терапия (€100/90 мин)</option>
@@ -1176,7 +1184,7 @@ Also available in English: couples therapy in Riga based on Gottman Method.
           <h2 class="footer-title">Навигация</h2>
           <ul class="footer-links">
             <li><a href="#about">Обо мне</a></li>
-          <li><a href="#services-section">Услуги и цены</a></li>
+          <li><a href="#services">Услуги и цены</a></li>
           <li><a href="#testimonials">Отзывы</a></li>
           <li><a href="#faq">Частые вопросы</a></li>
           <li><a href="#contact">Контакты</a></li>
@@ -1214,17 +1222,22 @@ Also available in English: couples therapy in Riga based on Gottman Method.
         <p class="footer-privacy"><a href="privacy.html">Политика конфиденциальности</a></p>
       </div>
     </div>
-  </footer>
-
-  
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17591249605"></script>
+  </footer>  <!-- Google tag (gtag.js): delayed so it does not compete with initial LCP rendering -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17591249605');
+  window.addEventListener('load', function () {
+    var loadGtag = function () {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17591249605';
+      s.async = true;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'AW-17591249605');
+    };
+    if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, { timeout: 3000 });
+    else setTimeout(loadGtag, 2000);
+  });
 </script>
   <script src="script.js" defer></script>
 
