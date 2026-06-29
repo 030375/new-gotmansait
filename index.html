@@ -1,3 +1,6 @@
+"Ksenija Bodrihina <ks.obuhova@gmail.com>" <ks.obuhova@gmail.com>
+
+
 <!DOCTYPE html>
 
 <html lang="ru">
@@ -31,7 +34,7 @@
 <meta content="56.9496;24.1052" name="geo.position"/>
 <meta content="56.9496, 24.1052" name="ICBM"/>
 <!-- Основные стили: грузим синхронно, чтобы не было FOUC и большого CLS -->
-<link href="style.css" rel="stylesheet"/>
+<link href="style_gottman_conversion.css" rel="stylesheet"/>
 <!-- Предзагрузка ключевых ресурсов -->
 <link as="font" crossorigin="" href="fonts/inter/inter-v19-latin-regular.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="fonts/playfair-display/playfair-display-v39-latin-700.woff2" rel="preload" type="font/woff2"/>
@@ -174,97 +177,192 @@
 <section class="hero hero-modern" id="main-content">
 <div class="container">
 <div class="hero-content">
-<!-- Текстовая часть -->
+
+<!-- Текст -->
 <div class="hero-copy animate-fade-in">
-<div class="hero-kicker"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>Семейный психолог в Риге · онлайн и очно</div>
-<h1 class="hero-title">Когда разговоры уже не помогают — отношениям нужна система</h1>
-<p class="hero-subtitle">Ксения Бодрихина · семейный психолог, специалист по методу Готтмана</p>
-<p class="hero-description">Помогаю парам выйти из повторяющихся ссор, эмоциональной дистанции и потери доверия. Мы не просто обсуждаем проблемы — мы находим сценарий, который разрушает отношения, и шаг за шагом меняем его.</p>
-<div class="hero-highlight"><i aria-hidden="true" class="fas fa-route"></i><span><strong>Моё отличие:</strong> работа по методу Готтмана — сначала диагностика вашей пары, затем понятная карта конфликта и конкретные инструменты для разговоров дома.</span></div>
-<ul aria-label="Опыт и подход" class="hero-stats">
+
+<div class="hero-kicker">
+<i class="fas fa-map-marker-alt"></i>
+Семейный психолог в Риге · онлайн и очно
+</div>
+
+<h1 class="hero-title">
+Отношения — это не только про любовь, а про навыки
+</h1>
+
+<p class="hero-subtitle">
+Ксения Бодрихина · специалист по методу Готтмана
+</p>
+
+<p class="hero-description">
+Метод Готтмана — это система, которая помогает не только спасти отношения в кризисе,
+но и выстроить их правильно с самого начала: без повторяющихся конфликтов,
+с понятным диалогом и устойчивой близостью.
+</p>
+
+<p class="hero-description">
+Я помогаю парам не просто обсудить проблемы, а понять, что именно происходит между вами —
+и шаг за шагом изменить сценарий отношений.
+</p>
+
+<div class="hero-highlight">
+<i class="fas fa-route"></i>
+<span>
+<strong>Моё отличие:</strong>
+сначала мы видим сценарий вашей пары, затем вы получаете понятную систему
+и конкретные инструменты для жизни, а не только для сессий.
+</span>
+</div>
+
+<ul class="hero-stats">
 <li class="stat-item"><span class="stat-value">8+</span><span class="stat-label">лет опыта</span></li>
 <li class="stat-item"><span class="stat-value">100+</span><span class="stat-label">пар</span></li>
-<li class="stat-item"><span class="stat-value">1-я</span><span class="stat-label">карта ситуации уже в начале</span></li>
+<li class="stat-item"><span class="stat-value">4–8 сессий </span><span class="stat-label">до первых изменений</span></li>
 </ul>
+
 <div class="hero-buttons">
-<a class="btn btn-primary" href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20парную%20консультацию%20по%20методу%20Готтмана" rel="noopener" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp icon btn-icon"></i>Записаться в WhatsApp</a>
-<a class="btn btn-outline" href="#method-proof"><i aria-hidden="true" class="fas fa-brain icon btn-icon"></i>Почему это работает</a>
+<a class="btn btn-primary"
+href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию"
+target="_blank" rel="noopener">
+<i class="fab fa-whatsapp"></i> Записаться в WhatsApp
+</a>
+
+<a class="btn btn-outline" href="#method-proof">
+<i class="fas fa-brain"></i> Как это работает
+</a>
+
+<button class="btn btn-outline js-start-test-btn" type="button">
+<i class="fas fa-clipboard-list"></i> Пройти тест
+</button>
 </div>
+
 </div>
+
 <!-- Фото -->
 <div class="hero-image animate-scale-in">
 <div class="hero-photo-card">
-<img alt="Ксения Бодрихина — семейный психолог в Риге" class="progressive-image" data-src="img/ksenija-hero-medium.webp" data-srcset="img/ksenija-hero-small.webp 300w,
-                           img/ksenija-hero-medium.webp 400w,
-                           img/ksenija-hero-large.webp 800w" fetchpriority="high" height="500" sizes="(max-width: 1023px) 280px, 420px" src="img/ksenija-hero-placeholder.webp" width="400"/>
+<img src="img/ksenija-hero-placeholder.webp"
+data-src="img/ksenija-hero-medium.webp"
+class="progressive-image"
+alt="Ксения Бодрихина"/>
+
 <div class="hero-photo-badge">
-<i aria-hidden="true" class="fas fa-heart"></i>
-              Метод Готтмана
-            </div>
+<i class="fas fa-heart"></i>
+Метод Готтмана
 </div>
 </div>
+</div>
+
 </div>
 </div>
 </section>
-<!-- Переходный блок -->
 
-<section aria-labelledby="method-proof-title" class="conversion-proof-section" id="method-proof">
+<!-- Блок: смысл метода -->
+<section class="conversion-proof-section" id="method-proof">
 <div class="container">
-<div class="conversion-head"><span class="section-eyebrow">Почему это не “просто поговорить”</span><h2 id="method-proof-title">Метод Готтмана помогает увидеть не тему ссоры, а ваш повторяющийся сценарий</h2><p>Если вы спорите об одном и том же, проблема часто не в самой теме. Важно понять, как именно разговор превращается в защиту, критику, молчание или взаимную боль.</p></div>
+
+<div class="conversion-head">
+<span class="section-eyebrow">
+Это не терапия только “в кризис”
+</span>
+
+<h2>
+Метод Готтмана помогает и сохранить, и правильно построить отношения
+</h2>
+
+<p>
+Сюда приходят не только когда всё плохо. Многие пары хотят заранее:
+научиться не разрушать разговоры, понимать друг друга глубже
+и выстроить устойчивую основу отношений.
+</p>
+
+<p>
+Если же вы уже застряли в повторяющихся конфликтах —
+мы работаем не с темой ссоры, а с вашим сценарием.
+</p>
+</div>
+
 <div class="conversion-steps">
-<article><span>01</span><h3>Сначала диагностика пары</h3><p>Определяем, где начинается конфликт, кто как реагирует и почему разговор снова заходит в тупик.</p></article>
-<article><span>02</span><h3>Потом карта конфликта</h3><p>Вы видите свой сценарий со стороны: атака, защита, обида, отстранение — и где его можно остановить.</p></article>
-<article><span>03</span><h3>Затем инструменты дома</h3><p>Не общие советы, а конкретные действия: как начать разговор мягче, сделать паузу и вернуться к диалогу.</p></article>
-</div>
-<div class="quick-cta-card"><p><strong>Если вы устали ходить по кругу — первая встреча нужна не для “разговора обо всём”, а чтобы понять, что именно происходит в вашей паре.</strong></p><a class="btn btn-primary" href="https://wa.me/37126037277?text=Здравствуйте!%20Хотим%20понять%20наш%20повторяющийся%20сценарий%20конфликта%20и%20записаться%20на%20консультацию" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> Хочу разобрать нашу ситуацию</a></div>
-</div>
-</section>
-<section aria-labelledby="already-tried-title" class="already-tried-section">
-<div class="container already-tried-card"><span class="section-eyebrow">Если вы уже пробовали психологов</span><h2 id="already-tried-title">Почему раньше могло не помочь</h2><p>Многие пары говорят: “Мы уже обсуждали проблемы, но дома всё повторилось”. Часто это происходит потому, что на консультациях было много разговора, но не была разобрана сама динамика конфликта.</p>
-<div class="before-after-grid"><div><h3>Обычный формат</h3><ul><li>много обсуждения прошлого;</li><li>советы “услышьте друг друга”;</li><li>облегчение после встречи, но старый сценарий дома;</li><li>нет понятной карты, что менять первым.</li></ul></div><div class="strong-side"><h3>Работа по методу Готтмана</h3><ul><li>видим повторяющийся цикл пары;</li><li>разбираем критику, защиту, обесценивание и отстранение;</li><li>тренируем новые реакции в реальных разговорах;</li><li>пара получает план, а не только поддержку.</li></ul></div></div></div>
-</section>
-<section aria-labelledby="fit-title" class="mobile-accordion-section"><div class="container"><div class="conversion-head compact"><span class="section-eyebrow">Подойдёт ли вам</span><h2 id="fit-title">Когда стоит записаться</h2></div><div class="fit-list">
-<details open=""><summary>Вы ссоритесь об одном и том же</summary><p>Мы ищем не виноватого, а механизм: что запускает конфликт и почему попытки помириться не работают.</p></details>
-<details><summary>Один давит, другой закрывается</summary><p>Это частый сценарий пары. Важно научиться снижать напряжение до того, как разговор разрушится.</p></details>
-<details><summary>Была измена или потеря доверия</summary><p>Работа строится аккуратно: сначала безопасность и ясность, затем восстановление контакта, если оба готовы.</p></details>
-<details><summary>Вы уже были у психолога, но результата мало</summary><p>Тогда особенно важна структура: диагностика сценария, конкретный план и практика между встречами.</p></details>
-</div></div></section>
 
-<!-- Доверительные знаки -->
-<section class="trust-badges trust-modern">
+<article>
+<span>01</span>
+<h3>Диагностика</h3>
+<p>Понимаем, как устроена именно ваша пара и где возникает напряжение</p>
+</article>
+
+<article>
+<span>02</span>
+<h3>Карта сценария</h3>
+<p>Вы видите свой цикл со стороны: давление, защита, дистанция</p>
+</article>
+
+<article>
+<span>03</span>
+<h3>Навыки для жизни</h3>
+<p>Конкретные инструменты, которые работают вне кабинета</p>
+</article>
+
+</div>
+
+<div class="quick-cta-card">
+<p><strong>
+Первая встреча — это не “поговорить обо всём”, а понять,
+как устроены ваши отношения и что менять в первую очередь.
+</strong></p>
+
+<a class="btn btn-primary"
+href="https://wa.me/37126037277?text=Здравствуйте!%20Хотим%20разобрать%20наши%20отношения"
+target="_blank">
+<i class="fab fa-whatsapp"></i> Разобрать нашу ситуацию
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- Когда стоит идти -->
+<section class="mobile-accordion-section">
 <div class="container">
-<div class="badges-grid">
-<div class="badge-item">
-<div class="badge-icon">
-<i aria-hidden="true" class="fas fa-certificate"></i>
+
+<div class="conversion-head compact">
+<span class="section-eyebrow">Подойдёт ли это вам</span>
+<h2>Когда стоит записаться</h2>
 </div>
-<p class="badge-text">Клинический психолог RSU</p>
+
+<div class="fit-list">
+
+<details open>
+<summary>Вы хотите, чтобы отношения были сильными, а не просто “нормальными”</summary>
+<p>
+Терапия помогает заранее выстроить диалог и навыки,
+которые удерживают отношения стабильными на годы.
+</p>
+</details>
+
+<details>
+<summary>Вы ссоритесь об одном и том же</summary>
+<p>Ищем не виноватого, а механизм, который запускает конфликт</p>
+</details>
+
+<details>
+<summary>Один давит, другой закрывается</summary>
+<p>Учимся снижать напряжение до разрушения разговора</p>
+</details>
+
+<details>
+<summary>Потеря доверия или измена</summary>
+<p>Пошагово восстанавливаем контакт, если оба готовы</p>
+</details>
+
+<details>
+<summary>Вы уже были у психолога, но мало результата</summary>
+<p>Здесь есть структура, план и практика между встречами</p>
+</details>
+
 </div>
-<div class="badge-item">
-<div class="badge-icon">
-<i aria-hidden="true" class="fas fa-lock"></i>
-</div>
-<p class="badge-text">Gottman Method Level 1 &amp; 2</p>
-</div>
-<div class="badge-item">
-<div class="badge-icon">
-<i aria-hidden="true" class="fas fa-calendar-check"></i>
-</div>
-<p class="badge-text">Конфиденциально и бережно</p>
-</div>
-<div class="badge-item">
-<div class="badge-icon">
-<i aria-hidden="true" class="fas fa-video"></i>
-</div>
-<p class="badge-text">Онлайн или очно в Риге</p>
-</div>
-</div>
+
 </div>
 </section>
-<!-- Почему эта терапия работает -->
-
-<section aria-labelledby="process-short-title" class="compact-process-section"><div class="container"><div class="conversion-head compact"><span class="section-eyebrow">Как проходит работа</span><h2 id="process-short-title">На первой встрече вы получаете ясность, а не лекцию</h2><p>Цель первой консультации — понять вашу ситуацию, увидеть повторяющийся цикл и договориться о первых шагах.</p></div><ol class="process-timeline"><li><strong>1. Что происходит сейчас</strong><span>Коротко собираем вашу историю и главную боль пары.</span></li><li><strong>2. Где ломается контакт</strong><span>Определяем момент, когда разговор превращается в конфликт.</span></li><li><strong>3. Что менять первым</strong><span>Вы получаете понятные первые действия для дома.</span></li><li><strong>4. План дальнейшей работы</strong><span>Решаем, какой формат и частота встреч подойдут вашей паре.</span></li></ol><div class="inline-cta"><a class="btn btn-primary" href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20первую%20консультацию%20для%20пары" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> Записаться на первую консультацию</a></div></div></section>
-
 <!-- О психологе -->
 <section aria-labelledby="about-heading" class="about-section" id="about">
 <div class="container">
@@ -588,7 +686,7 @@
 <li><i class="fas fa-star icon"></i><span>Комфорт и уединение в привычной обстановке</span></li>
 <li><i class="fas fa-star icon"></i><span>Больше гибкости при выборе времени сессии</span></li>
 </ul>
-</div>
+<div class="service-notice insurance-notice"><i aria-hidden="true" class="fas fa-file-invoice-dollar icon"></i><p><strong>Возможна оплата по страховке.</strong> Условия компенсации зависят от вашего страхового полиса — при необходимости подготовлю документ для страховой.</p></div></div>
 <a class="service-button" href="https://wa.me/37126037277?text=Здравствуйте!%20Хотим%20записаться%20на%20ОНЛАЙН%20парную%20консультацию" rel="noopener" target="_blank">
 <i class="fab fa-whatsapp icon"></i>Записаться на онлайн
         </a>
@@ -617,7 +715,7 @@
 <li><i class="fas fa-star icon"></i><span>Полное погружение в процесс терапии</span></li>
 <li><i class="fas fa-star icon"></i><span>Уютный кабинет в центре Риги</span></li>
 </ul>
-<div class="service-notice warning-notice">
+<div class="service-notice insurance-notice"><i aria-hidden="true" class="fas fa-file-invoice-dollar icon"></i><p><strong>Возможна оплата по страховке.</strong> Условия компенсации зависят от вашего страхового полиса — при необходимости подготовлю документ для страховой.</p></div><div class="service-notice warning-notice">
 <i class="fas fa-clock icon"></i><p><strong>Внимание:</strong> Количество вечерних часов ограничено.</p>
 </div>
 </div>
@@ -642,7 +740,7 @@
 <li><i class="fas fa-check icon"></i><span>Понимание своих потребностей и границ</span></li>
 <li><i class="fas fa-check icon"></i><span>Развитие эмоционального интеллекта</span></li>
 </ul>
-<div class="service-notice info-notice">
+<div class="service-notice insurance-notice"><i aria-hidden="true" class="fas fa-file-invoice-dollar icon"></i><p><strong>Возможна оплата по страховке.</strong> Условия компенсации зависят от вашего страхового полиса — при необходимости подготовлю документ для страховой.</p></div><div class="service-notice info-notice">
 <i class="fas fa-info-circle icon"></i>
 <p>Консультации проводятся как <strong>очно</strong>, так и <strong>онлайн</strong>. Выберите удобный для вас формат при записи.</p>
 </div>
@@ -978,7 +1076,6 @@ Also available in English: couples therapy in Riga based on Gottman Method.
 <article class="article-card visible" id="gottman-article1"></article>
 <article class="article-card visible" id="gottman-article2"></article>
 <article class="article-card visible" id="gottman-article3"></article>
-<article class="article-card visible" id="gottman-article4"></article>
 </div>
 <div style="text-align: center; margin-top: 20px;">
 <button class="read-more-btn" id="load-more-articles" style="width: auto; padding: 14px 30px;">
@@ -1069,6 +1166,6 @@ Also available in English: couples therapy in Riga based on Gottman Method.
     setTimeout(loadGtag, 6000);
   })();
 </script>
-<script defer="" src="script.js"></script>
+<script defer="" src="script_gottman_conversion.js"></script>
 <div aria-label="Быстрая запись" class="mobile-sticky-cta" role="complementary"><a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию%20для%20пары" rel="noopener" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp"></i> Записаться</a></div></body>
 </html>
