@@ -368,34 +368,94 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // --- ЗАГРУЗКА СТАТЕЙ ---
     function initArticleLoader() {
-        function loadGottmanArticle(url, targetId) {
-            const container = document.getElementById(targetId);
-            if (!container) return;
+        const articles = Array.isArray(window.ARTICLES) ? window.ARTICLES.slice() : [];
+        if (!articles.length) return;
 
-            fetch(url)
-                .then(response => { if (!response.ok) throw new Error(`Network response was not ok`); return response.text(); })
-                .then(html => {
-                    container.innerHTML = html;
-                    const btn = container.querySelector('.read-more-btn');
-                    const content = container.querySelector('.more-content');
-                    if (btn && content) {
-                        content.style.display = 'none';
-                        btn.onclick = function () {
-                            const isExpanded = content.style.display === 'block';
-                            content.style.display = isExpanded ? 'none' : 'block';
-                            btn.textContent = isExpanded ? 'Читать далее' : 'Свернуть';
-                        };
-                    }
-                })
-                .catch(error => {
-                    console.error('Ошибка загрузки статьи:', error);
-                    container.innerHTML = `<div style="text-align: center; padding: 20px; color: #e11d48;">Не удалось загрузить статью.</div>`;
-                });
+        // Новые статьи сверху: сортировка по дате от новых к старым.
+        articles.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+
+        function escapeHtml(value) {
+            return String(value || '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
         }
-        loadGottmanArticle('articles/den-surka.html', 'gottman-article1');
-        loadGottmanArticle('articles/on-ne-slyshit.html', 'gottman-article2');
-        loadGottmanArticle('articles/metod_gotmana.html', 'gottman-article3');
-loadGottmanArticle('articles/5_sohibok.html', 'gottman-article4');
+
+        function formatDate(dateString) {
+            if (!dateString) return '';
+            const date = new Date(dateString + 'T00:00:00');
+            if (Number.isNaN(date.getTime())) return dateString;
+            return date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        function createArticleCard(article) {
+            const title = escapeHtml(article.title);
+            const description = escapeHtml(article.description);
+            const category = escapeHtml(article.category || 'Статья');
+            const readingTime = escapeHtml(article.readingTime || '');
+            const url = escapeHtml(article.url);
+            const dateText = escapeHtml(formatDate(article.date));
+            const badge = article.featured ? '<span class="article-badge">Новая статья</span>' : '';
+
+            return `
+                <article class="article-card visible article-preview-card">
+                    <div class="article-header">
+                        <div class="article-card-meta">
+                            <span>${category}</span>
+                            ${readingTime ? `<span>${readingTime}</span>` : ''}
+                        </div>
+                        <h2>${title}</h2>
+                        ${dateText ? `<p>${dateText}</p>` : ''}
+                        ${badge}
+                    </div>
+                    <div class="article-content">
+                        <p>${description}</p>
+                        <a class="read-more-btn" href="${url}">Читать статью</a>
+                    </div>
+                </article>`;
+        }
+
+        function renderArticles(container, items) {
+            container.innerHTML = items.map(createArticleCard).join('');
+        }
+
+        // Главная страница: показываем последние 6 статей.
+        const homeList = document.getElementById('articles-list');
+        if (homeList) {
+            renderArticles(homeList, articles.slice(0, 6));
+        }
+
+        // Страница articles.html: каталог всех статей + фильтр + поиск.
+        const allList = document.getElementById('all-articles-list');
+        if (allList) {
+            const searchInput = document.getElementById('article-search');
+            const categorySelect = document.getElementById('article-category');
+            const countElement = document.getElementById('articles-count');
+
+            const categories = [...new Set(articles.map(a => a.category).filter(Boolean))].sort();
+            if (categorySelect) {
+                categorySelect.innerHTML = '<option value="">Все темы</option>' + categories.map(cat => `<option value="${escapeHtml(cat)}">${escapeHtml(cat)}</option>`).join('');
+            }
+
+            function applyFilters() {
+                const query = (searchInput?.value || '').trim().toLowerCase();
+                const category = categorySelect?.value || '';
+                const filtered = articles.filter(article => {
+                    const haystack = [article.title, article.description, article.category, ...(article.keywords || [])].join(' ').toLowerCase();
+                    const matchesQuery = !query || haystack.includes(query);
+                    const matchesCategory = !category || article.category === category;
+                    return matchesQuery && matchesCategory;
+                });
+                renderArticles(allList, filtered);
+                if (countElement) countElement.textContent = `${filtered.length} ${filtered.length === 1 ? 'статья' : 'статей'}`;
+            }
+
+            searchInput?.addEventListener('input', applyFilters);
+            categorySelect?.addEventListener('change', applyFilters);
+            applyFilters();
+        }
     }
 
     // =================================================================================
