@@ -4497,8 +4497,10 @@ p, li {
 }
 
 /* ==========================================================
-   STAGE 2 COMPONENT REFACTOR — safe bottom layer, без important-маркеров
-   Scope: buttons, cards, grids, footer, forms, FAQ
+   STAGE 2 COMPONENT REFACTOR v2 — safe component layer
+   Scope: buttons, common cards, grids, footer, forms, FAQ.
+   Important: unique visual sections are intentionally excluded:
+   .why-card, .infidelity-content, .hero-photo-card, .quick-cta-card.
    ========================================================== */
 :root {
   --btn-height: 3rem;
@@ -4506,10 +4508,13 @@ p, li {
   --btn-pad-x: 1.35rem;
   --card-pad: clamp(1.15rem, 3vw, 2rem);
   --grid-gap: clamp(1rem, 3vw, 2rem);
+  --hover-y: -4px;
   --focus-ring: 0 0 0 4px rgba(225, 29, 72, .18);
+  --hover-shadow-primary: 0 18px 38px rgba(225, 29, 72, .26);
+  --hover-shadow-neutral: 0 20px 44px rgba(15, 23, 42, .12);
 }
 
-/* Buttons */
+/* ---------- Buttons: unified and touch-friendly ---------- */
 .btn,
 .service-button,
 .test-button,
@@ -4526,40 +4531,22 @@ p, li {
   gap: .65rem;
   min-height: var(--btn-height);
   padding: .85rem var(--btn-pad-x);
-  border-radius: var(--radius-pill, 9999px);
   border: 1px solid transparent;
+  border-radius: var(--radius-pill, 9999px);
   font: inherit;
   font-weight: 800;
   line-height: 1.15;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
-}
-
-.btn:hover,
-.service-button:hover,
-.test-button:hover,
-.cta-btn:hover,
-.feedback-btn:hover,
-.whatsapp-btn:hover,
-.telegram-btn:hover,
-.read-more-btn:hover,
-.btn-infidelity:hover {
-  transform: translateY(-2px);
-}
-
-.btn:focus-visible,
-.service-button:focus-visible,
-.test-button:focus-visible,
-.cta-btn:focus-visible,
-.feedback-btn:focus-visible,
-.whatsapp-btn:focus-visible,
-.telegram-btn:focus-visible,
-.read-more-btn:focus-visible,
-.btn-infidelity:focus-visible {
-  outline: none;
-  box-shadow: var(--focus-ring), var(--shadow-soft, 0 10px 24px rgba(15,23,42,.06));
+  transform: translateZ(0);
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    background-color .22s ease,
+    color .22s ease,
+    border-color .22s ease,
+    filter .22s ease;
 }
 
 .btn-primary,
@@ -4570,7 +4557,7 @@ p, li {
 .btn-infidelity {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: var(--white);
-  box-shadow: 0 14px 28px rgba(225, 29, 72, .22);
+  box-shadow: 0 12px 26px rgba(225, 29, 72, .22);
 }
 
 .btn-outline,
@@ -4579,22 +4566,71 @@ p, li {
   background: var(--white);
   color: var(--primary);
   border-color: rgba(225, 29, 72, .34);
-  box-shadow: var(--shadow-soft);
-}
-
-.btn-outline:hover,
-.cta-btn:hover,
-.telegram-btn:hover {
-  background: var(--rose-50, #fff1f2);
-  color: var(--primary-dark);
-  border-color: rgba(225, 29, 72, .5);
+  box-shadow: var(--shadow-soft, 0 10px 24px rgba(15, 23, 42, .06));
 }
 
 .whatsapp-btn,
 .mobile-sticky-cta a {
   background: linear-gradient(135deg, #25D366, #128C7E);
   color: #fff;
-  box-shadow: 0 14px 28px rgba(18, 140, 126, .26);
+  box-shadow: 0 12px 26px rgba(18, 140, 126, .24);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover,
+  .service-button:hover,
+  .test-button:hover,
+  .feedback-btn:hover,
+  .read-more-btn:hover,
+  .btn-infidelity:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--hover-shadow-primary);
+    filter: saturate(1.05);
+  }
+
+  .btn-outline:hover,
+  .cta-btn:hover,
+  .telegram-btn:hover {
+    transform: translateY(-3px);
+    background: var(--rose-50, #fff1f2);
+    color: var(--primary-dark);
+    border-color: rgba(225, 29, 72, .52);
+    box-shadow: var(--hover-shadow-neutral);
+  }
+
+  .whatsapp-btn:hover,
+  .mobile-sticky-cta a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgba(18, 140, 126, .32);
+    filter: saturate(1.08);
+  }
+}
+
+.btn:active,
+.service-button:active,
+.test-button:active,
+.cta-btn:active,
+.feedback-btn:active,
+.whatsapp-btn:active,
+.telegram-btn:active,
+.read-more-btn:active,
+.btn-infidelity:active,
+.mobile-sticky-cta a:active {
+  transform: translateY(0) scale(.985);
+}
+
+.btn:focus-visible,
+.service-button:focus-visible,
+.test-button:focus-visible,
+.cta-btn:focus-visible,
+.feedback-btn:focus-visible,
+.whatsapp-btn:focus-visible,
+.telegram-btn:focus-visible,
+.read-more-btn:focus-visible,
+.btn-infidelity:focus-visible,
+.mobile-sticky-cta a:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring), var(--shadow-soft, 0 10px 24px rgba(15, 23, 42, .06));
 }
 
 .hero-buttons .btn,
@@ -4605,51 +4641,99 @@ p, li {
   width: 100%;
 }
 
-/* Cards */
+/* ---------- Common cards only — unique hero/why/infidelity blocks are excluded ---------- */
 .profile-card,
 .service-card,
 .testimonial-card,
 .problem-card,
-.bridge-card,
-.why-card,
-.already-tried-card,
-.quick-cta-card,
 .faq-card,
 .article-card,
+.education-item,
+.check-card,
 .conversion-steps article,
 .fit-list details,
-.process-timeline li {
+.process-timeline li,
+.already-tried-card {
   border: 1px solid rgba(226, 232, 240, .9);
   border-radius: var(--radius-xl, 1.5rem);
   background: var(--white);
-  box-shadow: var(--shadow-soft);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  box-shadow: var(--shadow-soft, 0 10px 24px rgba(15, 23, 42, .06));
+  transform: translateZ(0);
+  transition:
+    transform .26s ease,
+    box-shadow .26s ease,
+    border-color .26s ease,
+    background-color .26s ease;
 }
 
-.profile-card:hover,
-.service-card:hover,
-.testimonial-card:hover,
-.problem-card:hover,
-.article-card:hover,
-.conversion-steps article:hover,
-.fit-list details:hover,
-.process-timeline li:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
-  border-color: rgba(225, 29, 72, .16);
-}
-
-.service-card,
 .profile-card,
+.service-card,
 .testimonial-card,
 .problem-card,
-.article-card {
+.faq-card,
+.article-card,
+.education-item,
+.check-card {
   overflow: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .profile-card:hover,
+  .service-card:hover,
+  .testimonial-card:hover,
+  .problem-card:hover,
+  .article-card:hover,
+  .education-item:hover,
+  .check-card:hover,
+  .conversion-steps article:hover,
+  .fit-list details:hover,
+  .process-timeline li:hover,
+  .already-tried-card:hover {
+    transform: translateY(var(--hover-y));
+    box-shadow: var(--hover-shadow-neutral);
+    border-color: rgba(225, 29, 72, .18);
+  }
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card::before {
+  transition: opacity .26s ease, height .26s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover::before {
+    height: 8px;
+    opacity: .95;
+  }
+
+  .service-card:hover .service-icon,
+  .problem-card:hover .problem-icon,
+  .trust-modern .badge-item:hover .badge-icon {
+    transform: translateY(-2px) scale(1.04);
+  }
 }
 
 .service-card.recommended {
   border-color: rgba(225, 29, 72, .55);
   box-shadow: 0 20px 50px rgba(225, 29, 72, .16);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-card.recommended:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 62px rgba(225, 29, 72, .22);
+  }
+}
+
+.service-icon,
+.problem-icon,
+.trust-modern .badge-icon {
+  transition: transform .26s ease, box-shadow .26s ease, background-color .26s ease;
 }
 
 .service-header,
@@ -4659,13 +4743,61 @@ p, li {
 .testimonial-card,
 .problem-card,
 .already-tried-card,
-.quick-cta-card,
 .faq-question,
 .faq-answer.open {
   padding: var(--card-pad);
 }
 
-/* Grids */
+/* Restore unique sections explicitly so component reset can never override them. */
+.why-card {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: rgba(15, 23, 42, .08);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, .18);
+}
+
+.why-card:hover {
+  transform: none;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, .18);
+  border-color: rgba(15, 23, 42, .08);
+}
+
+.why-card .section-eyebrow {
+  background: rgba(255, 255, 255, .10);
+  color: #fecdd3;
+}
+
+.why-content h2 {
+  color: #ffffff;
+}
+
+.why-content p {
+  color: #cbd5e1;
+}
+
+.why-list li {
+  background: rgba(255, 255, 255, .07);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.why-list i {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.hero-photo-card {
+  background: linear-gradient(145deg, #ffffff, #ffe4e6);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, .14);
+}
+
+.infidelity-content {
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(225, 29, 72, .42), rgba(126, 34, 206, .26)) border-box;
+}
+
+/* ---------- Grids ---------- */
 .about-grid,
 .gottman-grid,
 .check-grid,
@@ -4736,9 +4868,14 @@ p, li {
   .badges-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .why-card {
+    grid-template-columns: .95fr 1.05fr;
+    align-items: center;
+  }
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 .footer {
   background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
   color: #e5e7eb;
@@ -4748,11 +4885,6 @@ p, li {
 .footer a {
   color: inherit;
   text-decoration: none;
-}
-
-.footer a:hover,
-.footer a:focus-visible {
-  color: #fff;
 }
 
 .footer-title,
@@ -4776,12 +4908,31 @@ p, li {
   align-items: center;
 }
 
+.footer-links a {
+  transition: color .22s ease, transform .22s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer a:hover,
+  .footer a:focus-visible {
+    color: #fff;
+  }
+
+  .footer-links a:hover {
+    transform: translateX(4px);
+  }
+
+  .social-link:hover {
+    transform: translateY(-4px) scale(1.03);
+  }
+}
+
 .footer-bottom {
   margin-top: 2rem;
   color: #cbd5e1;
 }
 
-/* Forms */
+/* ---------- Forms ---------- */
 .form-group {
   display: grid;
   gap: .5rem;
@@ -4802,6 +4953,7 @@ p, li {
   border-radius: var(--radius-md, .75rem);
   background: #fff;
   color: var(--text);
+  transition: border-color .22s ease, box-shadow .22s ease, background-color .22s ease;
 }
 
 .form-input:focus,
@@ -4821,7 +4973,7 @@ p, li {
   gap: .75rem;
 }
 
-/* FAQ */
+/* ---------- FAQ ---------- */
 .faq-container {
   display: grid;
   gap: 1rem;
@@ -4842,6 +4994,7 @@ p, li {
   border: 0;
   color: var(--secondary);
   text-align: left;
+  transition: background-color .22s ease, color .22s ease;
 }
 
 .faq-question:hover,
@@ -4859,5 +5012,29 @@ p, li {
 
 .faq-icon {
   flex: 0 0 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .service-button,
+  .test-button,
+  .cta-btn,
+  .feedback-btn,
+  .whatsapp-btn,
+  .telegram-btn,
+  .read-more-btn,
+  .btn-infidelity,
+  .profile-card,
+  .service-card,
+  .testimonial-card,
+  .problem-card,
+  .faq-card,
+  .article-card,
+  .education-item,
+  .check-card,
+  .footer-links a,
+  .social-link {
+    transition: none;
+  }
 }
 
