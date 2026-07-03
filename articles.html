@@ -3,111 +3,237 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Полезные статьи о семейной терапии и отношениях | Ксения Бодрихина</title>
-  <meta name="description" content="Статьи семейного психолога Ксении Бодрихиной о парной терапии, методе Готтмана, конфликтах, доверии и близости в отношениях.">
+  <title>Полезные статьи о парной терапии и методе Готтмана | Ксения Бодрихина</title>
+  <meta name="description" content="Все статьи Ксении Бодрихиной о парной терапии, семейной психологии, методе Готтмана, конфликтах, доверии и эмоциональной близости в отношениях.">
   <link rel="canonical" href="https://gottmanterapija.lv/articles.html">
   <link rel="stylesheet" href="style_gottman_conversion_stage2_refactor.css">
   <link href="fonts/fontawesome/css/all.min.css" rel="stylesheet">
   <link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;💑&lt;/text&gt;&lt;/svg&gt;" rel="icon">
-  <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Полезные статьи о семье, отношениях и методе Готтмана",
-  "description": "Каталог статей Ксении Бодрихиной о парной терапии, конфликтах, доверии и восстановлении близости.",
-  "url": "https://gottmanterapija.lv/articles.html",
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://gottmanterapija.lv/articles/5_sohibok.html",
-        "name": "5 ошибок в отношениях, которые превращают любовь в «день сурка»"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://gottmanterapija.lv/articles/metod_gotmana.html",
-        "name": "Метод Готтмана — простым языком"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://gottmanterapija.lv/articles/on-ne-slyshit.html",
-        "name": "Он меня не слышит!"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://gottmanterapija.lv/articles/den-surka.html",
-        "name": "«День сурка» в отношениях"
-      }
-    ]
-  }
-}</script>
   <style>
     body { padding-top: var(--navbar-height, 80px); }
-    .articles-hub-hero { padding: 72px 0 42px; background: linear-gradient(135deg, #fff1f2 0%, #ffffff 55%, #eef2ff 100%); }
-    .articles-hub-hero h1 { font-size: clamp(2rem, 7vw, 4rem); margin-bottom: 16px; }
-    .articles-tools { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 28px 0 10px; }
-    .articles-tools input, .articles-tools select { min-height: 52px; border: 1px solid #e2e8f0; border-radius: 16px; padding: 0 16px; font: inherit; background: #fff; }
-    .articles-count { color: #64748b; font-weight: 700; margin-top: 10px; }
-    .articles-catalog { padding: 54px 0 86px; background: #f8fafc; }
-    .articles-catalog .container { display: grid; grid-template-columns: 1fr; gap: 20px; }
-    .article-card-meta { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 10px; font-size: .85rem; font-weight: 800; opacity: .9; }
-    .article-badge { display: inline-block; margin-top: 10px; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.18); font-weight: 900; }
-    @media (min-width: 768px) { .articles-tools { grid-template-columns: 1fr 260px; } .articles-catalog .container { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (min-width: 1024px) { .articles-catalog .container { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    .articles-catalog-section {
+      padding: 72px 0 96px;
+      background: linear-gradient(135deg, #fff1f2 0%, #ffffff 52%, #eef2ff 100%);
+      min-height: 80vh;
+    }
+    .articles-catalog-header {
+      max-width: 900px;
+      margin: 0 auto 34px;
+      text-align: center;
+      padding: 44px 28px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #be123c 0%, #e11d48 52%, #7c3aed 100%);
+      box-shadow: 0 24px 60px rgba(190, 18, 60, .20);
+      color: #fff;
+    }
+    .articles-catalog-header h1 {
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      margin-bottom: 14px;
+    }
+    .articles-catalog-header p {
+      color: rgba(255,255,255,.92);
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+    .articles-controls {
+      max-width: 1050px;
+      margin: 0 auto 26px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .article-filter-btn {
+      border: 0;
+      background: #fff;
+      color: #9f1239;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, .08);
+    }
+    .article-filter-btn.active {
+      background: #e11d48;
+      color: #fff;
+    }
+    .articles-grid-catalog {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+    .catalog-article-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 18px 48px rgba(15,23,42,.09);
+      border: 1px solid rgba(225, 29, 72, .10);
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+    }
+    .catalog-article-card .article-category {
+      color: #e11d48;
+      font-weight: 900;
+      font-size: .88rem;
+      margin-bottom: 10px;
+    }
+    .catalog-article-card h2 {
+      font-size: 1.35rem;
+      line-height: 1.25;
+      margin: 0 0 12px;
+      color: #111827;
+    }
+    .catalog-article-card p {
+      color: #4b5563;
+      line-height: 1.65;
+      margin: 0 0 18px;
+    }
+    .catalog-article-meta {
+      color: #6b7280;
+      font-size: .92rem;
+      margin-top: auto;
+      margin-bottom: 18px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .catalog-article-card a.read-link {
+      color: #e11d48;
+      font-weight: 900;
+      text-decoration: none;
+    }
+    .catalog-empty {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 12px 32px rgba(15,23,42,.08);
+      color: #991b1b;
+      font-weight: 800;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <nav aria-label="Основная навигация" class="navbar" role="navigation">
     <div class="nav-container">
-      <a aria-label="На главную — Ксения Бодрихина" class="logo" href="index.html">
-        <div class="logo-icon"><i aria-hidden="true" class="fas fa-heart icon nav-icon"></i></div>
-        <span>Ксения Бодрихина</span>
-      </a>
-      <button aria-expanded="false" aria-label="Открыть меню" class="mobile-menu-btn" id="mobile-menu-btn"><i aria-hidden="true" class="fas fa-bars"></i></button>
-      <ul class="nav-links" role="menubar">
-        <li><a class="nav-link" href="index.html#services"><i class="fas fa-concierge-bell icon nav-icon"></i> Услуги</a></li>
-        <li><a class="nav-link" href="index.html#about"><i class="fas fa-user icon nav-icon"></i> Обо мне</a></li>
-        <li><a class="nav-link" href="index.html#faq"><i class="fas fa-question-circle icon nav-icon"></i> Вопросы</a></li>
-        <li><a class="nav-link" href="articles.html"><i class="fas fa-book-open icon nav-icon"></i> Полезные статьи</a></li>
+      <a class="logo" href="index.html"><div class="logo-icon"><i class="fas fa-heart"></i></div><span>Ксения Бодрихина</span></a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html#services">Услуги</a></li>
+        <li><a class="nav-link" href="index.html#about">Обо мне</a></li>
+        <li><a class="nav-link" href="index.html#faq">Вопросы</a></li>
+        <li><a class="nav-link" href="articles.html">Полезные статьи</a></li>
+        <li><a class="nav-link" href="index.html#contact">Контакты</a></li>
       </ul>
     </div>
   </nav>
 
-  <main>
-    <section class="articles-hub-hero">
-      <div class="container">
-        <span class="section-eyebrow"><i class="fas fa-book-open"></i> База знаний</span>
-        <h1>Полезные статьи о семье, отношениях и методе Готтмана</h1>
-        <p>Здесь собраны материалы о конфликтах, доверии, близости, кризисах и практических инструментах для пар.</p>
-        <div class="articles-tools" role="search">
-          <input id="article-search" type="search" placeholder="Поиск по статьям: конфликт, доверие, измена..." aria-label="Поиск по статьям">
-          <select id="article-category" aria-label="Фильтр по теме"><option value="">Все темы</option></select>
-        </div>
-        <p class="articles-count" id="articles-count"></p>
-      </div>
-    </section>
+  <main class="articles-catalog-section">
+    <div class="container">
+      <header class="articles-catalog-header">
+        <h1><i class="fas fa-book-open"></i> Полезные статьи</h1>
+        <p>Материалы о парной терапии, методе Готтмана, доверии, конфликтах и эмоциональной близости. Здесь собраны все статьи сайта, а не только последние публикации.</p>
+      </header>
 
-    <section class="articles-section articles-catalog" aria-labelledby="all-articles-heading">
-      <div class="container" id="all-articles-list" aria-live="polite">
-        <!-- Все статьи автоматически создаются из articles-data.js -->
-      </div>
-    </section>
+      <div class="articles-controls" id="articlesFilters" aria-label="Фильтр статей"></div>
+      <section class="articles-grid-catalog" id="articlesCatalog" aria-label="Каталог статей"></section>
+      <div class="catalog-empty" id="articlesEmpty" hidden>Статьи не загрузились. Проверьте, что файл articles-data.js загружен в корень сайта и подключается без ошибки.</div>
+    </div>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p>© 2026 Ксения Бодрихина. Все права защищены.</p>
-        <p><a href="index.html">На главную</a> · <a href="privacy.html">Политика конфиденциальности</a></p>
-      </div>
-    </div>
-  </footer>
+  <script src="articles-data.js"></script>
+  <script>
+    (function () {
+      const catalog = document.getElementById('articlesCatalog');
+      const filters = document.getElementById('articlesFilters');
+      const empty = document.getElementById('articlesEmpty');
 
-  <script defer src="articles-data.js"></script>
-  <script defer src="script_gottman_conversion.js"></script>
+      function escapeHtml(value) {
+        return String(value || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      function normalizeUrl(url) {
+        if (!url) return '#';
+        return String(url).replace(/^\.\//, '');
+      }
+
+      function formatDate(dateString) {
+        if (!dateString) return '';
+        const date = new Date(dateString + 'T00:00:00');
+        if (Number.isNaN(date.getTime())) return dateString;
+        return date.toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' });
+      }
+
+      function getArticles() {
+        return Array.isArray(window.ARTICLES) ? window.ARTICLES.slice() : [];
+      }
+
+      function renderCards(category) {
+        let articles = getArticles();
+        articles.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+        if (category && category !== 'Все') {
+          articles = articles.filter(article => article.category === category);
+        }
+
+        catalog.innerHTML = '';
+        empty.hidden = articles.length > 0;
+
+        articles.forEach(article => {
+          const card = document.createElement('article');
+          card.className = 'catalog-article-card';
+          card.innerHTML = `
+            <div class="article-category">${escapeHtml(article.category || 'Статья')}</div>
+            <h2>${escapeHtml(article.title)}</h2>
+            <p>${escapeHtml(article.description)}</p>
+            <div class="catalog-article-meta">
+              <span><i class="fas fa-calendar-alt"></i> ${escapeHtml(formatDate(article.date))}</span>
+              <span><i class="fas fa-clock"></i> ${escapeHtml(article.readingTime || '')}</span>
+            </div>
+            <a class="read-link" href="${escapeHtml(normalizeUrl(article.url))}">Читать статью <i class="fas fa-arrow-right"></i></a>
+          `;
+          catalog.appendChild(card);
+        });
+      }
+
+      function renderFilters() {
+        const articles = getArticles();
+        const categories = ['Все'].concat([...new Set(articles.map(article => article.category).filter(Boolean))]);
+        filters.innerHTML = '';
+
+        categories.forEach((category, index) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'article-filter-btn' + (index === 0 ? ' active' : '');
+          button.textContent = category;
+          button.addEventListener('click', () => {
+            document.querySelectorAll('.article-filter-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            renderCards(category);
+          });
+          filters.appendChild(button);
+        });
+      }
+
+      if (!Array.isArray(window.ARTICLES) || window.ARTICLES.length === 0) {
+        empty.hidden = false;
+        return;
+      }
+
+      renderFilters();
+      renderCards('Все');
+    })();
+  </script>
 </body>
 </html>
