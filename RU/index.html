@@ -1,3 +1,4 @@
+﻿
 <!DOCTYPE html>
 
 <html lang="ru">
@@ -31,7 +32,7 @@
 <meta content="56.9496;24.1052" name="geo.position"/>
 <meta content="56.9496, 24.1052" name="ICBM"/>
 <!-- Основные стили: грузим синхронно, чтобы не было FOUC и большого CLS -->
-<link href="style_gottman_conversion.css" rel="stylesheet"/>
+<link href="style_gottman_conversion_optimized.min.css" rel="stylesheet"/>
 <!-- Предзагрузка ключевых ресурсов -->
 <link as="font" crossorigin="" href="fonts/inter/inter-v19-latin-regular.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="fonts/playfair-display/playfair-display-v39-latin-700.woff2" rel="preload" type="font/woff2"/>
@@ -52,12 +53,12 @@
     "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Skolas iela 12",
+      "streetAddress": "Krišjāņa Barona iela 63",
       "addressLocality": "Riga",
-      "postalCode": "LV-1010",
+      "postalCode": "LV-1001",
       "addressCountry": "LV"
     },
-    "geo": { "@type": "GeoCoordinates", "latitude": 56.957061, "longitude": 24.115096 },
+    "geo": { "@type": "GeoCoordinates", "latitude": 56.9571648, "longitude": 24.1337932 },
     "description": "Профессиональная семейная и парная терапия в Риге по научно обоснованному методу Готтмана. Помощь в восстановлении доверия и близости.",
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "20:00" },
@@ -87,7 +88,8 @@
     .diploma-image-wrapper { aspect-ratio: 513 / 362; overflow: hidden; background: #f8fafc; }
     .diploma-image-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
     #diplomaLightbox { contain: layout paint; }
-    #lightboxImage { width: min(92vw, 1100px); height: auto; max-height: 88vh; object-fit: contain; display: block; aspect-ratio: 4 / 3; }
+    #lightboxImage { width: auto; max-width: 96vw; height: auto; max-height: 92vh; object-fit: contain; display: block; }
+    .diploma-image-wrapper img { cursor: zoom-in; }
     .map-container iframe { width: 100%; min-height: 360px; border: 0; display: block; }
     .article-card:empty { display: none; }
     @media (min-width: 1024px) { .hero-content { grid-template-columns: minmax(0,1fr) 420px; } }
@@ -169,84 +171,213 @@
 </ul>
 </div>
 </nav>
+
+
 <!-- Главная секция -->
 <main>
-<section class="hero hero-modern" id="main-content">
-<div class="container">
-<div class="hero-content">
-<!-- Текстовая часть -->
-<div class="hero-copy animate-fade-in">
-<div class="hero-kicker"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>Семейный психолог в Риге · онлайн и очно</div>
-<h1 class="hero-title">Когда разговоры уже не помогают — отношениям нужна система</h1>
-<p class="hero-subtitle">Ксения Бодрихина · семейный психолог, специалист по методу Готтмана</p>
-<p class="hero-description">Помогаю парам выйти из повторяющихся ссор, эмоциональной дистанции и потери доверия. Мы не просто обсуждаем проблемы — мы находим сценарий, который разрушает отношения, и шаг за шагом меняем его.</p>
-<div class="hero-highlight"><i aria-hidden="true" class="fas fa-route"></i><span><strong>Моё отличие:</strong> работа по методу Готтмана — сначала диагностика вашей пары, затем понятная карта конфликта и конкретные инструменты для разговоров дома.</span></div>
-<ul aria-label="Опыт и подход" class="hero-stats">
-<li class="stat-item"><span class="stat-value">8+</span><span class="stat-label">лет опыта</span></li>
-<li class="stat-item"><span class="stat-value">100+</span><span class="stat-label">пар</span></li>
-<li class="stat-item"><span class="stat-value">1-я</span><span class="stat-label">карта ситуации уже в начале</span></li>
-</ul>
-<div class="hero-buttons">
-<a class="btn btn-primary" href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20парную%20консультацию%20по%20методу%20Готтмана" rel="noopener" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp icon btn-icon"></i>Записаться в WhatsApp</a>
-<a class="btn btn-outline" href="#method-proof"><i aria-hidden="true" class="fas fa-brain icon btn-icon"></i>Почему это работает</a>
-<button class="btn btn-outline js-start-test-btn" type="button"><i aria-hidden="true" class="fas fa-clipboard-list icon btn-icon"></i>Пройти тест отношений</button>
-</div>
-</div>
-<!-- Фото -->
-<div class="hero-image animate-scale-in">
-<div class="hero-photo-card">
-<img alt="Ксения Бодрихина — семейный психолог в Риге" class="progressive-image" data-src="img/ksenija-hero-medium.webp" data-srcset="img/ksenija-hero-small.webp 300w,
+  <section class="hero hero-modern" id="main-content">
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Текстовая часть -->
+        <div class="hero-copy animate-fade-in">
+
+          <div class="hero-kicker">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            Семейный психолог в Риге
+          </div>
+
+          <h1 class="hero-title">
+            Семейный психолог в Риге — помощь парам вернуть доверие и близость
+          </h1>
+
+          <p class="hero-subtitle">
+            Ксения Бодрихина
+          </p>
+
+          <p class="hero-description">
+            Парная и семейная терапия по методу Готтмана — для пар, которые устали
+            ссориться, отдаляться и ходить по кругу одних и тех же проблем.
+          </p>
+
+          <div class="hero-highlight">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+            <span>
+              Сертифицированный клинический психолог и единственный специалист в Латвии, работающий по научному методу Готтмана.Профессиональная терапия для преодоления кризисов, восстановления доверия после измен и возвращения близости.
+            </span>
+          </div>
+
+          <ul class="hero-stats" aria-label="Опыт и результаты">
+            <li class="stat-item">
+              <span class="stat-value">8+</span>
+              <span class="stat-label">лет опыта</span>
+            </li>
+            <li class="stat-item">
+              <span class="stat-value">100+</span>
+              <span class="stat-label">пар</span>
+            </li>
+            <li class="stat-item">
+              <span class="stat-value">4–8</span>
+              <span class="stat-label">сессий до первых изменений</span>
+            </li>
+          </ul>
+
+          <div class="hero-buttons">
+            <a
+              href="https://wa.me/37126037277?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20консультацию%20на%20тему%20отношений"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp icon btn-icon" aria-hidden="true"></i>
+              Записаться в WhatsApp
+            </a>
+
+<a class="btn btn-outline" href="semejnyj-psiholog-riga.html">
+<i class="fas fa-brain"></i>
+Как это работает
+</a>
+            <button type="button" class="btn btn-outline js-start-test-btn">
+              <i class="fas fa-brain icon btn-icon" aria-hidden="true"></i>
+              Пройти тест отношений
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Фото -->
+        <div class="hero-image animate-scale-in">
+          <div class="hero-photo-card">
+            <img
+              class="progressive-image"
+              src="img/ksenija-hero-placeholder.webp"
+              data-src="img/ksenija-hero-medium.webp"
+              data-srcset="img/ksenija-hero-small.webp 300w,
                            img/ksenija-hero-medium.webp 400w,
-                           img/ksenija-hero-large.webp 800w" fetchpriority="high" height="500" sizes="(max-width: 1023px) 280px, 420px" src="img/ksenija-hero-placeholder.webp" width="400"/>
-<div class="hero-photo-badge">
-<i aria-hidden="true" class="fas fa-heart"></i>
+                           img/ksenija-hero-large.webp 800w"
+              sizes="(max-width: 1023px) 280px, 420px"
+              alt="Ксения Бодрихина — семейный психолог в Риге"
+              fetchpriority="high"
+              width="400"
+              height="500"
+            >
+
+            <div class="hero-photo-badge">
+              <i class="fas fa-heart" aria-hidden="true"></i>
               Метод Готтмана
             </div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Переходный блок -->
+          </div>
+        </div>
 
-<section aria-labelledby="method-proof-title" class="conversion-proof-section" id="method-proof"><div class="container"><div class="conversion-head"><span class="section-eyebrow">Почему это не “просто поговорить”</span><h2 id="method-proof-title">Метод Готтмана помогает увидеть не тему ссоры, а ваш повторяющийся сценарий</h2><p>Если вы спорите об одном и том же, проблема часто не в самой теме. Важно понять, как именно разговор превращается в защиту, критику, молчание или взаимную боль.</p></div><div class="conversion-steps"><article><span>01</span><h3>Сначала диагностика пары</h3><p>Определяем, где начинается конфликт, кто как реагирует и почему разговор снова заходит в тупик.</p></article><article><span>02</span><h3>Потом карта конфликта</h3><p>Вы видите свой сценарий со стороны: атака, защита, обида, отстранение — и где его можно остановить.</p></article><article><span>03</span><h3>Затем инструменты дома</h3><p>Не общие советы, а конкретные действия: как начать разговор мягче, сделать паузу и вернуться к диалогу.</p></article></div><div class="quick-cta-card"><p><strong>Если вы устали ходить по кругу — первая встреча нужна не для “разговора обо всём”, а чтобы понять, что именно происходит в вашей паре.</strong></p><a class="btn btn-primary" href="https://wa.me/37126037277?text=Здравствуйте!%20Хотим%20понять%20наш%20повторяющийся%20сценарий%20конфликта%20и%20записаться%20на%20консультацию" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> Хочу разобрать нашу ситуацию</a></div><div class="quick-test-cta"><button class="btn btn-outline js-start-test-btn" type="button"><i aria-hidden="true" class="fas fa-brain"></i> Не уверены? Пройти короткий тест отношений</button></div></div></section>
-<section aria-labelledby="already-tried-title" class="already-tried-section"><div class="container already-tried-card"><span class="section-eyebrow">Если вы уже пробовали психологов</span><h2 id="already-tried-title">Почему раньше могло не помочь</h2><p>Многие пары говорят: “Мы уже обсуждали проблемы, но дома всё повторилось”. Часто это происходит потому, что на консультациях было много разговора, но не была разобрана сама динамика конфликта.</p><div class="before-after-grid"><div><h3>Обычный формат</h3><ul><li>много обсуждения прошлого;</li><li>советы “услышьте друг друга”;</li><li>облегчение после встречи, но старый сценарий дома;</li><li>нет понятной карты, что менять первым.</li></ul></div><div class="strong-side"><h3>Работа по методу Готтмана</h3><ul><li>видим повторяющийся цикл пары;</li><li>разбираем критику, защиту, обесценивание и отстранение;</li><li>тренируем новые реакции в реальных разговорах;</li><li>пара получает план, а не только поддержку.</li></ul></div></div></div></section>
-<section aria-labelledby="fit-title" class="mobile-accordion-section"><div class="container"><div class="conversion-head compact"><span class="section-eyebrow">Подойдёт ли вам</span><h2 id="fit-title">Когда стоит записаться</h2></div><div class="fit-list"><details open=""><summary>Вы ссоритесь об одном и том же</summary><p>Мы ищем не виноватого, а механизм: что запускает конфликт и почему попытки помириться не работают.</p></details><details><summary>Один давит, другой закрывается</summary><p>Это частый сценарий пары. Важно научиться снижать напряжение до того, как разговор разрушится.</p></details><details><summary>Была измена или потеря доверия</summary><p>Работа строится аккуратно: сначала безопасность и ясность, затем восстановление контакта, если оба готовы.</p></details><details><summary>Вы уже были у психолога, но результата мало</summary><p>Тогда особенно важна структура: диагностика сценария, конкретный план и практика между встречами.</p></details></div></div></section>
+      </div>
+    </div>
+  </section>
 
-<!-- Доверительные знаки -->
-<section class="trust-badges trust-modern">
-<div class="container">
-<div class="badges-grid">
-<div class="badge-item">
-<div class="badge-icon">
-<i aria-hidden="true" class="fas fa-certificate"></i>
-</div>
-<p class="badge-text">Клинический психолог RSU</p>
-</div>
-<div class="badge-item">
-<div class="badge-icon">
-<i aria-hidden="true" class="fas fa-lock"></i>
-</div>
-<p class="badge-text">Gottman Method Level 1 &amp; 2</p>
-</div>
-<div class="badge-item">
-<div class="badge-icon">
-<i aria-hidden="true" class="fas fa-calendar-check"></i>
-</div>
-<p class="badge-text">Конфиденциально и бережно</p>
-</div>
-<div class="badge-item">
-<div class="badge-icon">
-<i aria-hidden="true" class="fas fa-video"></i>
-</div>
-<p class="badge-text">Онлайн или очно в Риге</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Почему эта терапия работает -->
+  <!-- Переходный блок -->
+  <section class="bridge bridge-modern">
+    <div class="container">
+      <div class="bridge-card">
+        <span class="section-eyebrow">Не просто разговор</span>
 
-<section aria-labelledby="process-short-title" class="compact-process-section"><div class="container"><div class="conversion-head compact"><span class="section-eyebrow">Как проходит работа</span><h2 id="process-short-title">На первой встрече вы получаете ясность, а не лекцию</h2><p>Цель первой консультации — понять вашу ситуацию, увидеть повторяющийся цикл и договориться о первых шагах.</p></div><ol class="process-timeline"><li><strong>1. Что происходит сейчас</strong><span>Коротко собираем вашу историю и главную боль пары.</span></li><li><strong>2. Где ломается контакт</strong><span>Определяем момент, когда разговор превращается в конфликт.</span></li><li><strong>3. Что менять первым</strong><span>Вы получаете понятные первые действия для дома.</span></li><li><strong>4. План дальнейшей работы</strong><span>Решаем, какой формат и частота встреч подойдут вашей паре.</span></li></ol><div class="inline-cta"><a class="btn btn-primary" href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20первую%20консультацию%20для%20пары" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> Записаться на первую консультацию</a></div></div></section>
+        <h2>Как проходит семейная терапия</h2>
+
+        <p>
+          Многие пары думают, что терапия — это просто обсуждение проблем.
+          На практике изменения происходят тогда, когда есть структура,
+          безопасный диалог и понятные инструменты.
+        </p>
+
+        <p>
+          Метод Готтмана помогает не только говорить о трудностях,
+          а менять саму динамику отношений: как вы спорите, слышите друг друга,
+          восстанавливаете доверие и близость.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Доверительные знаки -->
+  <section class="trust-badges trust-modern">
+    <div class="container">
+      <div class="badges-grid">
+
+        <div class="badge-item">
+          <div class="badge-icon">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+          </div>
+          <p class="badge-text">Дипломированный специалист</p>
+        </div>
+
+        <div class="badge-item">
+          <div class="badge-icon">
+            <i class="fas fa-lock" aria-hidden="true"></i>
+          </div>
+          <p class="badge-text">Конфиденциальность</p>
+        </div>
+
+        <div class="badge-item">
+          <div class="badge-icon">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+          </div>
+          <p class="badge-text">Гибкое расписание</p>
+        </div>
+
+        <div class="badge-item">
+          <div class="badge-icon">
+            <i class="fas fa-video" aria-hidden="true"></i>
+          </div>
+          <p class="badge-text">Онлайн или очно</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Почему эта терапия работает -->
+  <section class="why-me why-modern">
+    <div class="container">
+      <div class="why-card">
+
+        <div class="why-content">
+          <span class="section-eyebrow">Почему это работает</span>
+
+          <h2>Терапия с понятной структурой, а не просто разговоры</h2>
+
+          <p>
+            Подход строится на конкретных техниках, которые помогают паре
+            научиться говорить без обвинений, слышать друг друга и выходить
+            из повторяющихся конфликтов.
+          </p>
+        </div>
+
+        <ul class="why-list">
+          <li>
+            <i class="fas fa-check" aria-hidden="true"></i>
+            <span>Конкретные техники вместо общих советов</span>
+          </li>
+          <li>
+            <i class="fas fa-check" aria-hidden="true"></i>
+            <span>Чёткая структура работы с парой</span>
+          </li>
+          <li>
+            <i class="fas fa-check" aria-hidden="true"></i>
+            <span>Научно обоснованный метод Готтмана</span>
+          </li>
+          <li>
+            <i class="fas fa-check" aria-hidden="true"></i>
+            <span>Первые изменения часто заметны через 4–8 сессий</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
 
 <!-- О психологе -->
 <section aria-labelledby="about-heading" class="about-section" id="about">
@@ -301,7 +432,7 @@
 <!-- Слайд 1 -->
 <div aria-label="Слайд 1" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="Сертификат 2 уровня по методу Готтмана" decoding="async" height="207" loading="lazy" src="img/gotman2.jpg" width="293"/>
+<img alt="Сертификат 2 уровня по методу Готтмана" decoding="async" height="207" loading="lazy" src="img/gotman2.jpg" data-full="img orig/gotman2.jpg" width="293"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -312,7 +443,7 @@
 <!-- Слайд 2 -->
 <div aria-label="Слайд 2" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="Сертификат 1 уровня по методу Готтмана" decoding="async" loading="lazy" src="img/GOTMAN_Level 1_opt.webp"/>
+<img alt="Сертификат 1 уровня по методу Готтмана" decoding="async" loading="lazy" src="img/GOTMAN_Level 1_opt.webp" data-full="img orig/GOTMAN_Level 1.webp"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -323,7 +454,7 @@
 <!-- Слайд 3 -->
 <div aria-label="Слайд 3" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="Обучение Востановление доверия" decoding="async" height="207" loading="lazy" src="img/izmena.jpg" width="292"/>
+<img alt="Обучение Востановление доверия" decoding="async" height="207" loading="lazy" src="img/izmena.jpg" data-full="img orig/izmena.jpg" width="292"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -334,7 +465,7 @@
 <!-- Слайд 4 -->
 <div aria-label="Слайд 4" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="Диплом от RSU" decoding="async" loading="lazy" src="img/diplom_opt.webp"/>
+<img alt="Диплом от RSU" decoding="async" loading="lazy" src="img/diplom_opt.webp" data-full="img orig/diplom.webp"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -345,7 +476,7 @@
 <!-- Слайд 5 -->
 <div aria-label="Слайд 5" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="Семейные расстановки" decoding="async" loading="lazy" src="img/semejnnyj rastanow_opt.webp"/>
+<img alt="Семейные расстановки" decoding="async" loading="lazy" src="img/semejnnyj rastanow_opt.webp" data-full="img orig/semejnnyj rastanow.webp"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -356,7 +487,7 @@
 <!-- Слайд 6 -->
 <div aria-label="Слайд 6" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="Сертификат коучинга" decoding="async" loading="lazy" src="img/couch profesional level_opt.webp"/>
+<img alt="Сертификат коучинга" decoding="async" loading="lazy" src="img/couch profesional level_opt.webp" data-full="img orig/couch profesional level.webp"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -367,7 +498,7 @@
 <!-- Слайд 7 -->
 <div aria-label="Слайд 7" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="Профессиональный коуч" decoding="async" loading="lazy" src="img/Profi couch_opt.webp"/>
+<img alt="Профессиональный коуч" decoding="async" loading="lazy" src="img/Profi couch_opt.webp" data-full="img orig/Profi couch.webp"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -378,7 +509,7 @@
 <!-- Слайд 8 -->
 <div aria-label="Слайд 8" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="НЛП Практик" decoding="async" loading="lazy" src="img/NLP_opt.webp"/>
+<img alt="НЛП Практик" decoding="async" loading="lazy" src="img/NLP_opt.webp" data-full="img orig/NLP.webp"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -389,7 +520,7 @@
 <!-- Слайд 9 -->
 <div aria-label="Слайд 9" aria-roledescription="slide" class="diploma-card" role="group">
 <div class="diploma-image-wrapper">
-<img alt="Работа с внутренними частями" decoding="async" loading="lazy" src="img/wnutr hastej_opt.webp"/>
+<img alt="Работа с внутренними частями" decoding="async" loading="lazy" src="img/wnutr hastej_opt.webp" data-full="img orig/wnutr hastej.webp"/>
 <div class="diploma-overlay"><i class="fas fa-search-plus"></i></div>
 </div>
 <div class="diploma-info">
@@ -555,7 +686,7 @@
 <div class="service-icon rose-icon"><i class="fas fa-laptop-medical icon"></i></div>
 <div>
 <h3>Парная терапия (Онлайн)</h3>
-<div class="service-price">€90  <span>/ 90 мин</span></div>
+<div class="service-price">€100  <span>/ 90 мин</span></div>
 </div>
 </div>
 <div class="service-body">
@@ -614,7 +745,7 @@
 <div class="service-icon indigo-icon"><i class="fas fa-user icon"></i></div>
 <div>
 <h3>Индивидуальная консультация on-line</h3>
-<div class="service-price">€50 <span>/ 60 мин</span></div>
+<div class="service-price">€60 <span>/ 60 мин</span></div>
 </div>
 </div>
 <div class="service-body">
@@ -673,9 +804,11 @@
 <div class="author-info">
 <p class="author-name">Елена, 31 год</p>
 <p>3 недели назад • 8 сессий</p>
-<p>
-Also available in English: couples therapy in Riga based on Gottman Method.
+
+<p class="visually-hidden agentic-context" lang="en">
+  Also available in English: couples therapy in Riga based on Gottman Method.
 </p>
+
 </div>
 </figcaption>
 </figure>
@@ -714,7 +847,7 @@ Also available in English: couples therapy in Riga based on Gottman Method.
 </div>
 <div>
 <h3 class="contact-title">Адрес</h3>
-<p>Рига, Skolas iela 12</p>
+<p>Рига, Krišjāņa Barona iela 63</p>
 </div>
 </div>
 <div class="contact-info-item">
@@ -773,7 +906,7 @@ Also available in English: couples therapy in Riga based on Gottman Method.
 <select autocomplete="off" class="form-input form-select" id="service" name="service" required="">
 <option value="">Выберите услугу</option>
 <option value="couple">Парная терапия (€100/90 мин)</option>
-<option value="individual">Индивидуальная консультация (€50/60 мин)</option>
+<option value="individual">Индивидуальная консультация (€60/60 мин)</option>
 </select>
 </div>
 <div class="form-group">
@@ -947,27 +1080,25 @@ Also available in English: couples therapy in Riga based on Gottman Method.
 </section>
 <!-- Карта -->
 <div class="map-container">
-<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.5178267842534!2d24.115096112364874!3d56.95706189848856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfcef47cc27f%3A0xe84194cba0fb404a!2sSkolas%20iela%2012%2C%20Centra%20rajons%2C%20R%C4%ABga%2C%20LV-1010!5e0!3m2!1sru!2slv!4v1753029330824!5m2!1sru!2slv" title="Карта с местоположением кабинета психолога в Риге на Skolas iela 12">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Kri%C5%A1j%C4%81%C5%86a+Barona+iela+63%2C+R%C4%ABga%2C+LV-1001&output=embed" title="Карта с местоположением кабинета психолога в Риге на Krišjāņa Barona iela 63">
 </iframe>
 </div>
 <!-- Статьи -->
 <section class="articles-section" id="articles">
-<div class="love-insight-root">
-<div class="section-header">
-<h2><i aria-hidden="true" class="fas fa-book-open"></i> Полезные статьи</h2>
-<p>Глубокие материалы о любви и методе Готтмана</p>
-</div>
-<div class="container">
-<article class="article-card visible" id="gottman-article1"></article>
-<article class="article-card visible" id="gottman-article2"></article>
-<article class="article-card visible" id="gottman-article3"></article>
-</div>
-<div style="text-align: center; margin-top: 20px;">
-<button class="read-more-btn" id="load-more-articles" style="width: auto; padding: 14px 30px;">
-<i aria-hidden="true" class="fas fa-clock"></i> Новые статьи каждую неделю
-          </button>
-</div>
-</div>
+  <div class="love-insight-root">
+    <div class="section-header">
+      <h2><i aria-hidden="true" class="fas fa-book-open"></i> Полезные статьи</h2>
+      <p>Глубокие материалы о любви, семейной терапии и методе Готтмана</p>
+    </div>
+    <div class="container articles-preview-grid" id="articles-list" aria-live="polite">
+      <!-- Карточки статей автоматически создаются из articles-data.js -->
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <a class="read-more-btn" href="articles.html" style="width: auto; padding: 14px 30px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+        <i aria-hidden="true" class="fas fa-book-open"></i> Все статьи
+      </a>
+    </div>
+  </div>
 </section>
 </main>
 <!-- Подвал -->
@@ -1012,7 +1143,7 @@ Also available in English: couples therapy in Riga based on Gottman Method.
 <div class="footer-card">
 <h2 class="footer-title">Контакты</h2>
 <div class="footer-contact">
-<div class="footer-contact-item"><i aria-hidden="true" class="fas fa-map-marker-alt"></i><span>Рига, Skolas iela 12</span></div>
+<div class="footer-contact-item"><i aria-hidden="true" class="fas fa-map-marker-alt"></i><span>Рига, Krišjāņa Barona iela 63</span></div>
 <div class="footer-contact-item"><i aria-hidden="true" class="fas fa-phone"></i><a class="contact-link" href="tel:+37126037277">+371 26 037 277</a></div>
 <div class="footer-contact-item"><i aria-hidden="true" class="fas fa-envelope"></i><a class="contact-link" href="mailto:ks.obuhova@gmail.com">ks.obuhova@gmail.com</a></div>
 <div class="footer-contact-item"><i aria-hidden="true" class="fas fa-clock"></i><span><strong>Пн–Пт:</strong> 9:00–20:00<br/><strong>Сб–Вс:</strong> 10:00–18:00</span></div>
@@ -1051,6 +1182,72 @@ Also available in English: couples therapy in Riga based on Gottman Method.
     setTimeout(loadGtag, 6000);
   })();
 </script>
-<script defer="" src="script_gottman_conversion.js"></script>
-<div aria-label="Быстрая запись" class="mobile-sticky-cta" role="complementary"><a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию%20для%20пары" rel="noopener" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp"></i> Записаться</a></div></body>
+<script defer src="articles-data.js"></script>
+<script defer src="script_gottman_conversion.js"></script>
+
+<div aria-label="Быстрая запись" class="mobile-sticky-cta" role="complementary"><a href="https://wa.me/37126037277?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию%20для%20пары" rel="noopener" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp"></i> Записаться</a></div>
+<script>
+(function () {
+  'use strict';
+  const lightbox = document.getElementById('diplomaLightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  if (!lightbox || !lightboxImage) return;
+
+  const closeButton = lightbox.querySelector('.lightbox-close');
+  const backdrop = lightbox.querySelector('.lightbox-backdrop');
+  const galleryImages = document.querySelectorAll('.diploma-image-wrapper img');
+
+  function openOriginal(image) {
+    const previewUrl = image.getAttribute('src');
+    const originalUrl = image.dataset.full || previewUrl;
+
+    lightboxImage.removeAttribute('width');
+    lightboxImage.removeAttribute('height');
+    lightboxImage.alt = image.alt || 'Увеличенный диплом';
+    lightboxImage.onerror = function () {
+      lightboxImage.onerror = null;
+      lightboxImage.src = previewUrl;
+    };
+    lightboxImage.src = originalUrl;
+
+    lightbox.classList.add('active');
+    lightbox.style.display = 'flex';
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightbox.style.display = '';
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lightboxImage.removeAttribute('src');
+  }
+
+  galleryImages.forEach(function (image) {
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', (image.alt || 'Диплом') + ' — открыть оригинал');
+    image.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      openOriginal(image);
+    }, true);
+    image.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openOriginal(image);
+      }
+    });
+  });
+
+  if (closeButton) closeButton.addEventListener('click', closeLightbox);
+  if (backdrop) backdrop.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeLightbox();
+  });
+})();
+</script>
+
+</body>
 </html>
